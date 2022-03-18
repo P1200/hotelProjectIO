@@ -2,19 +2,16 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './MainTab.css';
 import Footer from '../../footer/Footer'
+import WelcomeTab from '../welcomeTab/WelcomeTab'
 
 const MainTab = () => {
 
     const {t, i18n} = useTranslation();
 
     return (
-        <div className="main-container" style={{display: 'inline'}}>
+        <div className="main-container" >
             <div >NAV</div>
-            <div>
-            main div 
-            <br/>
-            {t('commonTexts.test')}
-            </div>
+           <WelcomeTab/>
             <Footer/>
         </div>
     )

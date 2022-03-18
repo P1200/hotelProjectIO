@@ -1,5 +1,13 @@
 .App {
   text-align: center;
+  min-height: 100vh;
+  min-width:100%;;
+  background-image: url(/src/components/background/background.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-attachment: fixed; /* pytac zuzy*/
+    background-size: cover;
+    min-height: fit-content;
 }
 
 .App-logo {
