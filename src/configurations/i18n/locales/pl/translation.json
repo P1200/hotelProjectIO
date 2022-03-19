@@ -2,6 +2,12 @@
       "___Section Common Text___" : "Sekcja częstych zwrotów...",
 
       "commonTexts.test" : "test pl",
+      "nav.hotel" : "Hotel",
+      "nav.price" : "Cennik",
+      "nav.restaurant" : "Restauracja",
+      "nav.relax" : "Strefa relaksu",
+      "nav.attractions" : "Atrakcje",
+      "nav.contact" : "Kontakt",
 
 
       "___Specialized Component's Text___" : "Sekcja dla dedykowanych zwrotów"
