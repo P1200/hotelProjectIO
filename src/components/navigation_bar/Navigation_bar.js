@@ -8,7 +8,7 @@ const Navigation_bar = () => {
     return (
         <nav>
             <div id="logo">
-                <img src="src\components\navigation_bar\logo.png" alt="OurLogo" width="5%" height="5%"/>
+                <img src="src/components/navigation_bar/logo.png" alt="OurLogo" width="5%" height="5%"/>
             </div>
             <ul>
                 <li><p>{t("nav.hotel")}</p></li>
