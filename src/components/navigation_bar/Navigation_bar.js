@@ -6,15 +6,9 @@ const Navigation_bar = () => {
     const {t, i18n} = useTranslation();
 
     return (
-<<<<<<< HEAD
         <nav id="nav">
             <div id="logo">
                 
-=======
-        <nav>
-            <div id="logo">
-                <img src="src\components\navigation_bar\logo.png" alt="OurLogo" width="5%" height="5%"/>
->>>>>>> 73b98812dbe7bf6f2f23e8dae30411e336c6d593
             </div>
             <ul>
                 <li><p>{t("nav.hotel")}</p></li>
