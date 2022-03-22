@@ -1,4 +1,18 @@
 #welcomeInformation
 {
-    height: 250px;
+    background: #FFFFFE;
+    margin: auto;
+    width: 50%;
+    min-height: auto;
+    border-style:groove;
+    border-radius:10px;
+    font-family: 'Oxygen';
+    font-weight: 400;
+    padding: 1%;
+    margin-top: 1%;
+}
+#WelcomeTab
+{
+    min-height: 80%;
+    
 }
