@@ -9,12 +9,15 @@
     font-family: 'Oxygen';
     font-weight: 400;
     padding: 1%;
+    margin-top: 1%;
 }
-#h1
+#WelcomeTab
 {
- font-weight: bold;
-}
-#blank{
-    min-height:50%;
-    margin: auto;
+    min-height: 75%;
+    background-image: url(/src/components/background/background.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-attachment: fixed; /* pytac zuzy*/
+    background-size: cover;
+    min-height: fit-content;
 }
