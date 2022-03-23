@@ -7,16 +7,14 @@ const Navigation_bar = () => {
 
     return (
         <nav id="nav">
-            <div id="logo">
-                
-            </div>
+            <div id="logo">  </div>
             <ul>
-                <li><p>{t("nav.hotel")}</p></li>
-                <li><p>{t("nav.price")}</p></li>
-                <li><p>{t("nav.restaurant")}</p></li>
+                <li><p>{t("nav.contact")}</p></li>
                 <li><p>{t("nav.relax")}</p></li>
                 <li><p>{t("nav.attractions")}</p></li>
-                <li><p>{t("nav.contact")}</p></li>
+                <li><p>{t("nav.restaurant")}</p></li>
+                <li><p>{t("nav.price")}</p></li>
+                <li><p>{t("nav.hotel")}</p></li>
             </ul>
         </nav>
     )

@@ -18,13 +18,16 @@ nav li
 {
     float: right;
     list-style-type: none;
+    margin-right: 4%;
 
 }
 nav li p
 {
     display: block;
     padding:10px;
-
+    font-size: 130%;
+    font-weight:500;
+    
 }
 #logo
 {
