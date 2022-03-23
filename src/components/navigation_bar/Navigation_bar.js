@@ -7,12 +7,7 @@ const Navigation_bar = () => {
 
     return (
         <nav id="nav">
-            <div id="logo">
-                
-
-        
-            
-            </div>
+            <div id="logo">  </div>
             <ul>
                 <li><p>{t("nav.contact")}</p></li>
                 <li><p>{t("nav.relax")}</p></li>
