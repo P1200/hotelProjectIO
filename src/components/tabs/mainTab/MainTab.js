@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import './MainTab.css';
 import Footer from '../../footer/Footer'
 import WelcomeTab from '../welcomeTab/WelcomeTab'
+import ContactTab from '../contactTab/ContactTab'
 import Navigation_bar from '../../navigation_bar/Navigation_bar';
 
 const MainTab = () => {
@@ -12,7 +13,7 @@ const MainTab = () => {
     return (
         <div className="main-container" >
             <Navigation_bar/>
-           <WelcomeTab/>
+           <ContactTab/>
             <Footer/>
         </div>
     )

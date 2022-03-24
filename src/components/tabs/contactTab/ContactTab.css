@@ -1,0 +1,28 @@
+#ContactTab
+{
+    min-height: 80%;
+    
+}
+#contactImg{
+    width: 100%;
+    height: 200pt;
+    background-image: url('./contactImg.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#contactImg p{
+    color: rgb(253, 243, 242);
+    float:right;
+    font-size: 500%;
+    padding-right: 20px;
+    padding-top: 90px;
+}
+#contactData ul{
+    background-color: none;
+    overflow: hidden;
+}
+#contactData ul li{
+    float: right;
+    list-style-type: none;
+    margin-right: 4%;
+}
