@@ -8,11 +8,11 @@ const ContactTab = () => {
     return (
         <div id='contactTab'>
             <div id='contactImg'>
-                <p>Kontakt</p>
+                <p>{t("nav.contact")}</p>
             </div>
             <div id='contactData'>
                 <div>
-                   <h4>Nawiąż z nami kontakt!</h4>
+                   <h4>{t("contact.formHeader")}</h4>
                    <ul>
                         <li>
                             <p>Fun<span>&amp;</span>Relax Hotel</p>
@@ -20,8 +20,8 @@ const ContactTab = () => {
                             <p>00-002, Kryspianowo PL</p>
                         </li>
                         <li>
-                            <p>Telefon</p>
-                            <p>Recepcja</p>
+                            <p>{t("contact.phoneNumber")}</p>
+                            <p>{("contact.reception")}</p>
                             <p>+48 652 346 981</p>
                             <p>Restauracja</p>
                             <p>+48 652 567 982</p>
@@ -36,7 +36,7 @@ const ContactTab = () => {
             </div>
             <form id="contactForm" action="process_form.php" method="post">
                 <fieldset>
-                    <h4>Napisz do nas</h4>
+                    <h4>{t("contact.writeToUs")}</h4>
                     <section>
                         <label for="email"></label>
                         <input type="text" id="email" name="email" placeholder="Email*"></input>
@@ -46,11 +46,11 @@ const ContactTab = () => {
                         <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Numer telefonu"></input>
                         <label for="message"></label>
                         <input type="text" id="message" name="message" placeholder="Twoja wiadomość*"></input>
-                        <p>Administratorem danych osobowych jest Fun<span>&amp;</span>Relax Hotel 00-002, ULICA JESIENNA 23, podane przez Ciebie dane będziemy przetwarzać w celu udzielenia odpowiedzi na przesłane zapytanie (art. 6 ust. 1 lit. f RODO). </p>
-                        <p>*pola wymagane</p>
+                        <p>{t("contact.personalData")}</p>
+                        <p>{t("contact.requiredField")}</p>
                     </section>
                     <section>
-                        <input type="submit" value="Wyślij"></input>
+                        <input type="submit" value={t("contact.sendButton")}></input>
                     </section>
                 </fieldset>
             </form>
