@@ -23,7 +23,7 @@ const ContactTab = () => {
                             <p>{t("contact.phoneNumber")}</p>
                             <p>{("contact.reception")}</p>
                             <p>+48 652 346 981</p>
-                            <p>Restauracja</p>
+                            <p>{t("nav.restaurant")}</p>
                             <p>+48 652 567 982</p>
                         </li>
                         <li>
@@ -41,9 +41,9 @@ const ContactTab = () => {
                         <label for="email"></label>
                         <input type="text" id="email" name="email" placeholder="Email*"></input>
                         <label for="nameAndSurname"></label>
-                        <input type="text" id="nameAndSurname" name="nameAndSurname" placeholder="Imię i nazwisko*"></input>
+                        <input type="text" id="nameAndSurname" name="nameAndSurname" placeholder={t("contact.form.nameAndSurname")}></input>
                         <label for="phoneNumber"></label>
-                        <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Numer telefonu"></input>
+                        <input type="text" id="phoneNumber" name="phoneNumber" placeholder={t("contact.phoneNumber")}></input>
                         <label for="message"></label>
                         <input type="text" id="message" name="message" placeholder="Twoja wiadomość*"></input>
                         <p>{t("contact.personalData")}</p>
