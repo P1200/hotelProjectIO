@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './MainTab.css';
+import ContactTab from '../contactTab/ContactTab'
 import Footer from '../../footer/Footer'
 import WelcomeTab from '../welcomeTab/WelcomeTab'
-import ContactTab from '../contactTab/ContactTab'
 import Navigation_bar from '../../navigation_bar/Navigation_bar';
 
 const MainTab = () => {

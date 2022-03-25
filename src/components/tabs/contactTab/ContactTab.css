@@ -1,11 +1,13 @@
-#ContactTab
+#contactTab
 {
     min-height: 80%;
+    background-color: none;
+
     
 }
 #contactImg{
     width: 100%;
-    height: 200pt;
+    height: 300pt;
     background-image: url('./contactImg.png');
     background-repeat: no-repeat;
     background-size: 100%;
@@ -18,11 +20,29 @@
     padding-top: 90px;
 }
 #contactData ul{
-    background-color: none;
     overflow: hidden;
 }
 #contactData ul li{
     float: right;
     list-style-type: none;
     margin-right: 4%;
+}
+#contactForm{
+    float: left;
+    width: 40%;
+    height: 30%;
+    padding-left: 5%;
+    padding-top: 2%;
+}
+#contactForm fieldset{
+    overflow: hidden;
+}
+#contactTab  form + div{
+    width: 40%;
+    height: 400pt;
+    background-image: url('./map.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    float: right;
+    margin-right: 5%;
 }

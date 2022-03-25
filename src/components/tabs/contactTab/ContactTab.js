@@ -6,7 +6,7 @@ const ContactTab = () => {
     const {t, i18n} = useTranslation();
 
     return (
-        <div id='ContactTab'>
+        <div id='contactTab'>
             <div id='contactImg'>
                 <p>Kontakt</p>
             </div>
@@ -33,6 +33,29 @@ const ContactTab = () => {
                         </li>
                    </ul>
                 </div>
+            </div>
+            <form id="contactForm" action="process_form.php" method="post">
+                <fieldset>
+                    <h4>Napisz do nas</h4>
+                    <section>
+                        <label for="email"></label>
+                        <input type="text" id="email" name="email" placeholder="Email*"></input>
+                        <label for="nameAndSurname"></label>
+                        <input type="text" id="nameAndSurname" name="nameAndSurname" placeholder="Imię i nazwisko*"></input>
+                        <label for="phoneNumber"></label>
+                        <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Numer telefonu"></input>
+                        <label for="message"></label>
+                        <input type="text" id="message" name="message" placeholder="Twoja wiadomość*"></input>
+                        <p>Administratorem danych osobowych jest Fun<span>&amp;</span>Relax Hotel 00-002, ULICA JESIENNA 23, podane przez Ciebie dane będziemy przetwarzać w celu udzielenia odpowiedzi na przesłane zapytanie (art. 6 ust. 1 lit. f RODO). </p>
+                        <p>*pola wymagane</p>
+                    </section>
+                    <section>
+                        <input type="submit" value="Wyślij"></input>
+                    </section>
+                </fieldset>
+            </form>
+            <div id="map">
+
             </div>
         </div>
     )
