@@ -27,7 +27,11 @@ nav li p
     padding:10px;
     font-size: 130%;
     font-weight:500;
+<<<<<<< HEAD:src/components/navigation_bar/Navigation_bar.css
+    
+=======
     text-decoration: none;
+>>>>>>> f28950323d1e692bfb97aaf857c2d9a8bafb00eb:src/components/const/navigationBar/NavigationBar.css
 }
 #logo
 {
@@ -38,8 +42,11 @@ nav li p
     height: 100%;
     width: 23%;
     margin: 5px;
+<<<<<<< HEAD:src/components/navigation_bar/Navigation_bar.css
+=======
 }
 Link:hover
 {
     text-decoration: none;
+>>>>>>> f28950323d1e692bfb97aaf857c2d9a8bafb00eb:src/components/const/navigationBar/NavigationBar.css
 }
