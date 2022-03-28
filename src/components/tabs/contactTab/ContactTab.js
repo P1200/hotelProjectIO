@@ -1,9 +1,40 @@
 import { useTranslation } from 'react-i18next';
+import React, { useState } from 'react';
 import './ContactTab.css';
+import * as yup from 'yup';
 
 const ContactTab = () => {
-
+    
     const {t, i18n} = useTranslation();
+
+    const schema = yup.object().shape({
+        name: yup.string().required(t("form.requiredValue")),
+        phone: yup.string(),
+        mail: yup.string().email(t("form.wrongEmail")).required(t("form.requiredValue")),
+      });
+    const [name, setName] = useState('');
+    const [mail, setMail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [errors, setErrors] = useState({});
+    const onSubmit = async e => {
+        e.preventDefault();
+    
+        const data = { name, phone, mail };
+        try {
+          await schema.validate(data, {abortEarly: false});
+          alert(JSON.stringify(data));
+        }
+        catch (e) {
+          const errors = e.inner.map(el => ({
+            fieldName: el.path,
+            message: el.message,
+          })).reduce((acc, current) => ({
+            ...acc,
+            [current.fieldName]: current.message,
+          }), {});
+          setErrors(errors);
+        }
+      }
 
     return (
         <div id='contactTab'>
@@ -35,21 +66,30 @@ const ContactTab = () => {
             <div id="cls"></div>
             <div id="mailAndMap">
                 <div > 
-                    <form id="contactForm" action="process_form.php" method="post">
-                        <fieldset>
-                            <h2>{t("contact.writeToUs")}</h2>
-                            <label for="email"></label>
-                            <input type="text" id="email" name="email" placeholder="Email*"></input>
-                            <label for="nameAndSurname"></label>
-                            <input type="text" id="nameAndSurname" name="nameAndSurname" placeholder={t("contact.form.nameAndSurname")}></input>
-                            <label for="phoneNumber"></label>
-                            <input type="text" id="phoneNumber" name="phoneNumber" placeholder={t("contact.phoneNumber")}></input>
-                            <label for="message"></label>
-                            <textarea id="message" name="message" placeholder="Twoja wiadomość*" rows="10" cols="100"></textarea>
-                            <p>{t("contact.personalData")}</p>
-                            <p>{t("contact.requiredField")}</p>
-                            <input type="submit" value={t("contact.sendButton")}></input>
-                        </fieldset>
+                    <form id="contactForm" onSubmit={onSubmit}>
+                        <h2>{t("contact.writeToUs")}</h2>
+                        <input placeholder={t("contact.form.nameAndSurname")} value={name} onChange={e => {
+                            setName(e.target.value);
+                            setErrors({});
+                        }} />
+                        {errors.name && <div style={{color: 'red'}}>{errors.name}</div>}
+
+                        <input placeholder={t("contact.phoneNumber")} value={phone} onChange={e => {
+                            setPhone(e.target.value);
+                            setErrors({});
+                        }} />
+                        {errors.phone && <div style={{color: 'red'}}>{errors.phone}</div>}
+
+                        <input placeholder="Email*" value={mail} onChange={e => {
+                            setMail(e.target.value);
+                            setErrors({});
+                        }} />
+                        {errors.mail && <div style={{color: 'red'}} >{errors.mail}</div>}
+
+                        <textarea id="message" name="message" placeholder="Twoja wiadomość*" rows="10" cols="100"></textarea>
+                        <p>{t("contact.personalData")}</p>
+                        <button>{t("contact.button")}</button>       
+
                     </form>
                 </div>
                 <div id="map">

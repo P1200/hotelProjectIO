@@ -5,7 +5,6 @@ import ContactTab from '../contactTab/ContactTab'
 import Footer from '../../footer/Footer'
 import WelcomeTab from '../welcomeTab/WelcomeTab'
 import Navigation_bar from '../../navigation_bar/Navigation_bar';
-import { faClosedCaptioning } from '@fortawesome/free-solid-svg-icons';
 
 const MainTab = () => {
 

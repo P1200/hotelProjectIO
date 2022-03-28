@@ -8,19 +8,23 @@
       "nav.relax" : "Strefa relaksu",
       "nav.attractions" : "Atrakcje",
       "nav.contact" : "Kontakt",
-      "contact.phoneNumber": "Telefon",
-      "contact.reception": "Recepcja",
-      "contact.personalData":"Administratorem danych osobowych jest Fun&Relax Hotel 00-002, ULICA JESIENNA 23, podane przez Ciebie dane będziemy przetwarzać w celu udzielenia odpowiedzi na przesłane zapytanie (art. 6 ust. 1 lit. f RODO).",
-      "contact.requiredField": "*pola wymagane",
-      "contact.sendButton": "Wyślij",
-      "contact.form.nameAndSurname": "Imię i nazwisko*",
-      "contact.form.yourMessage": "Twoja widomość*",
+      
+ 
 
 
 
       "___Specialized Component's Text___" : "Sekcja dla dedykowanych zwrotów",
-      "contact.formHeader": "Nawiąż z nami kontakt!",
-      "contact.writeToUs": "Napisz do nas"
       
-  
+      
+      "___Form___" : "Sekcja Formularza",
+      "contact.formHeader": "Nawiąż z nami kontakt!",
+      "contact.writeToUs": "Napisz do nas",
+      "form.requiredValue": "To pole jest wymagane",
+      "form.wrongEmail": "Niepoprawny adres email",
+      "contact.button": "Wyślij",
+      "contact.reception": "Recepcja",
+      "contact.personalData":"Administratorem danych osobowych jest Fun&Relax Hotel 00-002, ULICA JESIENNA 23, podane przez Ciebie dane będziemy przetwarzać w celu udzielenia odpowiedzi na przesłane zapytanie (art. 6 ust. 1 lit. f RODO).",
+      "contact.form.nameAndSurname": "Imię i nazwisko",
+      "contact.form.yourMessage": "Twoja widomość",
+      "contact.phoneNumber": "Telefon"
 }
