@@ -1,0 +1,29 @@
+{
+      "___Section Common Text___" : "Common Text Section, please insert them below...",
+
+      "commonTexts.test" : "test en",
+      "nav.hotel" : "Hotel",
+      "nav.price" : "Price",
+      "nav.restaurant" : "Restaurant",
+      "nav.relax" : "Relax",
+      "nav.attractions" : "Attractions",
+      "nav.contact" : "Contact",
+      "contact.reception": "Reception",
+
+
+      "___Specialized Component's Text___" : "Designed for specific components Text Section",
+
+      "___Form___" : "Form Section",
+      "contact.formHeader": "Make contact with us!",
+      "contact.writeToUs": "Write to us",
+      "form.requiredValue": "This value is required",
+      "form.wrongEmail": "Valid email",
+      "contact.button": "Submit",
+      "contact.personalData":"The administrator of personal data is Fun & Relax Hotel 00-002, ULICA JESIENNA 23, we will process the data provided by you in order to answer the inquiry (Article 6 (1) (f) of the GDPR).",
+      "contact.form.nameAndSurname": "Name",
+      "contact.phoneNumber": "Phone number",
+      "contact.form.yourMessage": "Your message"
+
+ 
+  
+}
