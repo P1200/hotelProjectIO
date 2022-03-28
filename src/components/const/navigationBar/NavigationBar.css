@@ -27,7 +27,7 @@ nav li p
     padding:10px;
     font-size: 130%;
     font-weight:500;
-    
+    text-decoration: none;
 }
 #logo
 {
@@ -38,4 +38,8 @@ nav li p
     height: 100%;
     width: 23%;
     margin: 5px;
+}
+Link:hover
+{
+    text-decoration: none;
 }

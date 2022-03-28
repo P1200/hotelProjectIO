@@ -32,10 +32,11 @@
     width: 40%;
     height: 50vh;
 }
-map
+#map
 {
-    float: left;
-    width: 40%;
+    margin-right:100px;
+    float: right;
+    width: 30%;
     height: 50vh;
 }
 #mailAndMap
