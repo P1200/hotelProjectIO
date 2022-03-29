@@ -37,7 +37,7 @@ export default function ContactTab ()
     return (
         <div id='contactTab'>
             <div id='contactImg'>
-                <p>KONTAKT</p>
+                <p id="header">KONTAKT</p>
             </div>
             <div id='contactData'>
                 <div id="information">
@@ -65,30 +65,32 @@ export default function ContactTab ()
             <div id="mailAndMap">
                 <div > 
                     <form id="contactForm" onSubmit={onSubmit}>
-                        <h2>Napisz do nas</h2>
-                        <input placeholder="Imię i nazwisko" value={name} onChange={e => {
+                        <div id="napis">
+                            <h2>Napisz do nas</h2>
+                        </div>
+                        <input id="email" placeholder="Email*" value={mail} onChange={e => {
+                            setMail(e.target.value);
+                            setErrors({});
+                        }} />
+                        {errors.mail && <div style={{color: 'red'}} >{errors.mail}</div>}
+                        <input id="name" placeholder="Imię i nazwisko" value={name} onChange={e => {
                             setName(e.target.value);
                             setErrors({});
                         }} />
                         {errors.name && <div style={{color: 'red'}}>{errors.name}</div>}
 
-                        <input placeholder="Numer telefonu" value={phone} onChange={e => {
+                        <input id="phone" placeholder="Numer telefonu" value={phone} onChange={e => {
                             setPhone(e.target.value);
                             setErrors({});
                         }} />
                         {errors.phone && <div style={{color: 'red'}}>{errors.phone}</div>}
 
-                        <input placeholder="Email*" value={mail} onChange={e => {
-                            setMail(e.target.value);
-                            setErrors({});
-                        }} />
-                        {errors.mail && <div style={{color: 'red'}} >{errors.mail}</div>}
 
                         <textarea id="message" name="message" placeholder="Twoja wiadomość*" rows="10" cols="100"></textarea>
-                        <p>
+                        <p id="note">
                             Administratorem danych osobowych jest Fun&Relax Hotel 00-002, ULICA JESIENNA 23, podane przez Ciebie dane będziemy przetwarzać w celu udzielenia odpowiedzi na przesłane zapytanie (art. 6 ust. 1 lit. f RODO).
                         </p>
-                        <button>Wyślij</button>       
+                        <button className="button" >Wyślij</button>       
 
                     </form>
                 </div>
