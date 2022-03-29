@@ -1,9 +1,6 @@
-import { useTranslation } from 'react-i18next';
 import './WelcomeTab.css';
 
 const WelcomeTab = () => {
-
-    const {t, i18n} = useTranslation();
 
     return (
         <div id='WelcomeTab'>

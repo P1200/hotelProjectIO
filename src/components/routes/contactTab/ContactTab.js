@@ -1,17 +1,14 @@
-import { useTranslation } from 'react-i18next';
 import React, { useState } from 'react';
 import './ContactTab.css';
 import * as yup from 'yup';
 
 export default function ContactTab ()
  {
-    
-    const {t, i18n} = useTranslation();
 
     const schema = yup.object().shape({
-        name: yup.string().required(t("form.requiredValue")),
+        name: yup.string().required("Pole wymagane"),
         phone: yup.string(),
-        mail: yup.string().email(t("form.wrongEmail")).required(t("form.requiredValue")),
+        mail: yup.string().email("Nieprawidłowy adres email").required("Pole wymagane"),
       });
     const [name, setName] = useState('');
     const [mail, setMail] = useState('');
@@ -40,21 +37,21 @@ export default function ContactTab ()
     return (
         <div id='contactTab'>
             <div id='contactImg'>
-                <p>{t("nav.contact")}</p>
+                <p>KONTAKT</p>
             </div>
             <div id='contactData'>
                 <div id="information">
-                   <h1>{t("contact.formHeader")}</h1>
+                   <h1>Nawiąż z nami kontakt</h1>
                    <div className='contactInformation'>
                         <h3>Fun<span>&amp;</span>Relax Hotel</h3>
                         <p>ul. Jesienna 23</p>
                         <p>00-002, Kryspianowo PL</p>
                     </div>
                     <div className='contactInformation'>  
-                        <h3>{t("contact.phoneNumber")}</h3>
-                        <p>{("contact.reception")}</p>
+                        <h3>Telefon</h3>
+                        <p>Recepcja</p>
                         <p>+48 652 346 981</p>
-                        <p>{t("nav.restaurant")}</p>
+                        <p>Restauracja</p>
                         <p>+48 652 567 982</p>
                     </div>
                     <div className='contactInformation'>
@@ -68,14 +65,14 @@ export default function ContactTab ()
             <div id="mailAndMap">
                 <div > 
                     <form id="contactForm" onSubmit={onSubmit}>
-                        <h2>{t("contact.writeToUs")}</h2>
-                        <input placeholder={t("contact.form.nameAndSurname")} value={name} onChange={e => {
+                        <h2>Napisz do nas</h2>
+                        <input placeholder="Imię i nazwisko" value={name} onChange={e => {
                             setName(e.target.value);
                             setErrors({});
                         }} />
                         {errors.name && <div style={{color: 'red'}}>{errors.name}</div>}
 
-                        <input placeholder={t("contact.phoneNumber")} value={phone} onChange={e => {
+                        <input placeholder="Numer telefonu" value={phone} onChange={e => {
                             setPhone(e.target.value);
                             setErrors({});
                         }} />
@@ -88,14 +85,15 @@ export default function ContactTab ()
                         {errors.mail && <div style={{color: 'red'}} >{errors.mail}</div>}
 
                         <textarea id="message" name="message" placeholder="Twoja wiadomość*" rows="10" cols="100"></textarea>
-                        <p>{t("contact.personalData")}</p>
-                        <button>{t("contact.button")}</button>       
+                        <p>
+                            Administratorem danych osobowych jest Fun&Relax Hotel 00-002, ULICA JESIENNA 23, podane przez Ciebie dane będziemy przetwarzać w celu udzielenia odpowiedzi na przesłane zapytanie (art. 6 ust. 1 lit. f RODO).
+                        </p>
+                        <button>Wyślij</button>       
 
                     </form>
                 </div>
                 <div id="map">
-                 
-                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6932.582436927996!2d15.726014361581637!3d52.097239516268615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spl!2spl!4v1648241788378!5m2!1spl!2spl" width="100%" height="100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6932.582436927996!2d15.726014361581637!3d52.097239516268615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spl!2spl!4v1648241788378!5m2!1spl!2spl" width="100%" height="100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                  </div>
             </div>
         </div>
