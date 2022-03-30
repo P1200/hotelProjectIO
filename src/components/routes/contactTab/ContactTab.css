@@ -139,6 +139,12 @@
     font-family: 'Oxygen';
     font-style: normal;
     font-weight: 700;
-    font-size:50px ;
+    font-size:5vmax;
     color: white;
+    float: right;
+    padding-right: 18vmax;
+    padding-top:10%;
+    width: 10%;
+    height: 10%;
+
 }
