@@ -1,6 +1,6 @@
 .contactInformation
 {
-    width: 20%;
+    width: 15%;
     float: left;
     text-align: left;
     font-size: 20px;
@@ -17,8 +17,8 @@
     font-family: 'Oxygen';
     font-style: normal;
     font-weight: 400;
-    font-size: 40px;
-    line-height: 30px;
+    font-size: 20px;
+    line-height: 20px;
     text-align: center;
 }
 #contactImg{

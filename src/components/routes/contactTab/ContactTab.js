@@ -9,15 +9,17 @@ export default function ContactTab ()
         name: yup.string().required("Pole wymagane"),
         phone: yup.string(),
         mail: yup.string().email("Nieprawidłowy adres email").required("Pole wymagane"),
+        msg: yup.string().required("Pole wymagane"),
       });
     const [name, setName] = useState('');
     const [mail, setMail] = useState('');
     const [phone, setPhone] = useState('');
+    const [msg, setMsg] = useState('');
     const [errors, setErrors] = useState({});
     const onSubmit = async e => {
         e.preventDefault();
     
-        const data = { name, phone, mail };
+        const data = { name, phone, mail, msg };
         try {
           await schema.validate(data, {abortEarly: false});
           alert(JSON.stringify(data));
@@ -72,24 +74,32 @@ export default function ContactTab ()
                             setMail(e.target.value);
                             setErrors({});
                         }} />
-                        {errors.mail && <div style={{color: 'red'}} >{errors.mail}</div>}
+                        
                         <input id="name" placeholder="Imię i nazwisko" value={name} onChange={e => {
                             setName(e.target.value);
                             setErrors({});
                         }} />
-                        {errors.name && <div style={{color: 'red'}}>{errors.name}</div>}
 
                         <input id="phone" placeholder="Numer telefonu" value={phone} onChange={e => {
                             setPhone(e.target.value);
                             setErrors({});
                         }} />
-                        {errors.phone && <div style={{color: 'red'}}>{errors.phone}</div>}
-
-
-                        <textarea id="message" name="message" placeholder="Twoja wiadomość*" rows="10" cols="100"></textarea>
+                        
+                        <input id="msg" placeholder="Twoja wiadomość" value={msg} onChange={e => {
+                            setMsg(e.target.value);
+                            setErrors({});
+                        }} />
+                        
                         <p id="note">
                             Administratorem danych osobowych jest Fun&Relax Hotel 00-002, ULICA JESIENNA 23, podane przez Ciebie dane będziemy przetwarzać w celu udzielenia odpowiedzi na przesłane zapytanie (art. 6 ust. 1 lit. f RODO).
                         </p>
+
+                        <div>
+                            {errors.mail && <p>{errors.mail}</p>}
+                            {errors.msg && <p>{errors.msg}</p>}
+                            {errors.phone && <p>{errors.phone}</p>}
+                            {errors.name && <p>{errors.name}</p>}
+                        </div>
                         <button className="button" >Wyślij</button>       
 
                     </form>

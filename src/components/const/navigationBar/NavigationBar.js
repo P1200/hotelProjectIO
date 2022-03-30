@@ -5,7 +5,7 @@ export default function NavigationBar() {
   return (
     <div>
       <nav id="nav">
-      <div id="logo">  </div>
+         <Link className="link" style={{textDecoration: "none", color:"black"}} to="/"><div id="logo"></div></Link>  
         <ul>
             <li><p><Link className="link" style={{textDecoration: "none", color:"black"}} to="/hotel">Hotel</Link></p> </li>
             <li><p><Link className="link" style={{textDecoration: "none", color:"black"}} to="/salary">Cennik</Link></p></li>

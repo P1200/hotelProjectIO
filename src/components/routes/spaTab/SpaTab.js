@@ -4,7 +4,7 @@ const SpaTab = () => {
 
     return (
         <div >
-            SalaryTab
+            SpaTab
         </div>
     )
 }
