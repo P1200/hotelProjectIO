@@ -1,9 +1,6 @@
-import { useTranslation } from 'react-i18next';
 import './WelcomeTab.css';
 
 const WelcomeTab = () => {
-
-    const {t, i18n} = useTranslation();
 
     return (
         <div id='WelcomeTab'>
@@ -15,6 +12,7 @@ const WelcomeTab = () => {
                    <h4>Siemaneczko mordeczki!!!</h4>
                     Tu będzie tekst witający naszych gości. Zachęta do rezerwacji pokoju. Coś o okolicy. Taki chwyt, żebyśmy mogi szybko zarobić miliony!
                 </div>
+                
             </div>
         </div>
     )
