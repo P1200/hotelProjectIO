@@ -10,8 +10,9 @@
     font-family: 'Oxygen';
     font-weight: 400;
     padding: 2%;
-    margin-top: 1%;
+    margin-top: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: block;
 }
 #WelcomeTab
 {
@@ -19,8 +20,10 @@
     background-color: white;
     background-image: url(/src/components/background/background.png);
     background-repeat: no-repeat;
-    background-position: left;
-    background-size: contain;
+    background-position:bottom;
+    background-size: 80%;
+    background-attachment: fixed;
+    
     
     
 }

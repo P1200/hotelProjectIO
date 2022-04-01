@@ -44,23 +44,25 @@ export default function ContactTab ()
             <div id='contactData'>
                 <div id="information">
                    <h1>Nawiąż z nami kontakt</h1>
-                   <div className='contactInformation'>
-                        <h3>Fun<span>&amp;</span>Relax Hotel</h3>
-                        <p>ul. Jesienna 23</p>
-                        <p>00-002, Kryspianowo PL</p>
-                    </div>
-                    <div className='contactInformation'>  
-                        <h3>Telefon</h3>
-                        <p>Recepcja</p>
-                        <p>+48 652 346 981</p>
-                        <p>Restauracja</p>
-                        <p>+48 652 567 982</p>
-                    </div>
+                   <div>
                     <div className='contactInformation'>
-                        <h3>Email<span>&amp;</span>Fax</h3>
-                        <p>fandr@gmail.com</p>
-                        <p>fax. +48 652 763 762</p>
-                     </div>  
+                            <h3>Fun<span>&amp;</span>Relax Hotel</h3>
+                            <p>ul. Jesienna 23</p>
+                            <p>00-002, Kryspianowo PL</p>
+                        </div>
+                        <div className='contactInformation'>  
+                            <h3>Telefon</h3>
+                            <p>Recepcja</p>
+                            <p>+48 652 346 981</p>
+                            <p>Restauracja</p>
+                            <p>+48 652 567 982</p>
+                        </div>
+                        <div className='contactInformation'>
+                            <h3>Email<span>&amp;</span>Fax</h3>
+                            <p>fandr@gmail.com</p>
+                            <p>fax. +48 652 763 762</p>
+                        </div>
+                   </div>  
                 </div>
             </div>
             <div id="cls"></div>

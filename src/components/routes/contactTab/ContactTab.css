@@ -4,7 +4,8 @@
     float: left;
     text-align: left;
     font-size: 20px;
-    margin-left: 250px;
+    margin-left: 15vw;
+    line-height: 2px;
     
 }
 #cls
@@ -35,8 +36,9 @@
     background-color: white;
     background-image: url(/src/components/background/background.png);
     background-repeat: no-repeat;
-    background-size:contain;
-    background-position: bottom;
+    background-position:bottom;
+    background-size: 80%;
+    background-attachment: fixed;
     text-align: center;
     font-size: 30px;
     font-family: 'Oxygen';
@@ -67,6 +69,7 @@
     text-align: center;
     height: 50vh;
     width: 100%;
+    margin-top: 20px;
 }
 #note
 {
