@@ -3,12 +3,13 @@ nav
     background-color: #FFFFFE;
     width: 100%;
     height: 8vw;
-    padding-bottom: 2vw; 
+    padding-bottom: 1vw; 
 }
 nav ul
 {
     background-color: #FFFFFE;
     float: inline-end;
+    float: right;
     width:70vw;
     margin-top: 1vw;
 }
@@ -29,12 +30,13 @@ nav li p
 #logo
 {
     float: inline-start;
+    float: left;
     background-image: url(./logo.png);
     background-repeat: no-repeat;
     background-size: 8vw;
     height: 8vw;
     width: 8vw;
-    margin: 1vw;
+    margin: 0.5vw;
 }
 Link:hover
 {
