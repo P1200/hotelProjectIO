@@ -1,16 +1,20 @@
-#foot
+#Picture
 {
-    background-color: #C4C4C4;
-    width: 100%;
-    margin-top: none;
-    display: inline-block;
-
-    
-    
+background-image:url("pokój1os.png");
 }
-#copyright
+#Parameters url 
 {
-    text-align: right;
-    font-family: "oxygen";
-    font-size: 15px;
+
+}
+#bed
+{
+background-image: url("bedIcon.png");
+}
+#airCon
+{
+background-image: url("airConditioningIcon.png");
+}
+#wiFi
+{
+background-image: url("WiFiIcon.png");
 }
