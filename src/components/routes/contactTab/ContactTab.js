@@ -70,35 +70,37 @@ export default function ContactTab ()
                         <div id="napis">
                             <h2>Napisz do nas</h2>
                         </div>
-                        <input id="email" placeholder="Email*" value={mail} onChange={e => {
-                            setMail(e.target.value);
-                            setErrors({});
-                        }} />
-                        
-                        <input id="name" placeholder="Imię i nazwisko" value={name} onChange={e => {
-                            setName(e.target.value);
-                            setErrors({});
-                        }} />
+                        <div id="email_block">
+                            <input id="email" placeholder="Email*" value={mail} onChange={e => {
+                                setMail(e.target.value);
+                                setErrors({});
+                            }} />
+                            {errors.mail && <p id="er_email">{errors.mail}</p>}
+                        </div>
+                        <div id="name_block">
+                            <input id="name" placeholder="Imię i nazwisko" value={name} onChange={e => {
+                                setName(e.target.value);
+                                setErrors({});
+                            }} />
+                            {errors.name && <p id="er_name">{errors.msg}</p>}
+                        </div>
 
-                        <input id="phone" placeholder="Numer telefonu" value={phone} onChange={e => {
-                            setPhone(e.target.value);
-                            setErrors({});
-                        }} />
-                        
-                        <input id="msg" placeholder="Twoja wiadomość" value={msg} onChange={e => {
-                            setMsg(e.target.value);
-                            setErrors({});
-                        }} />
-                        
-                        <p id="note">
+                        <div id="phone_block">
+                            <input id="phone" placeholder="Numer telefonu" value={phone} onChange={e => {
+                                setPhone(e.target.value);
+                                setErrors({});
+                            }} />
+                            {errors.phone && <p id="er_phone">{errors.phone}</p>}
+                        </div>
+                        <div id="msg_block">
+                            <input id="msg" placeholder="Twoja wiadomość" value={msg} onChange={e => {
+                                setMsg(e.target.value);
+                                setErrors({});
+                            }} />
+                            {errors.msg && <p id="er_msg">{errors.name}</p>}
+                        </div>
+                        <div id="note">
                             Administratorem danych osobowych jest Fun&Relax Hotel 00-002, ULICA JESIENNA 23, podane przez Ciebie dane będziemy przetwarzać w celu udzielenia odpowiedzi na przesłane zapytanie (art. 6 ust. 1 lit. f RODO).
-                        </p>
-
-                        <div>
-                            {errors.mail && <p>{errors.mail}</p>}
-                            {errors.msg && <p>{errors.msg}</p>}
-                            {errors.phone && <p>{errors.phone}</p>}
-                            {errors.name && <p>{errors.name}</p>}
                         </div>
                         <button className="button" >Wyślij</button>       
 
