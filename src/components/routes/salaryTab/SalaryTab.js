@@ -8,7 +8,7 @@ const SalaryTab = () => {
             SalaryTab <br/>
             SalaryTab <br/>
             SalaryTab <br/>
-            <button onClick={()=>setIsPopupCalendar(true)}>KLIKNIJ PIZDO</button>
+            <button onClick={()=>setIsPopupCalendar(true)}>KLIKNIJ</button>
             <PopupCalendar
                 open={isPopupCalendar}
                 close={()=>setIsPopupCalendar(false)}
