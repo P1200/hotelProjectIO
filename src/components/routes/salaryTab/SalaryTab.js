@@ -18,7 +18,6 @@ const SalaryTab = () => {
                     <button onClick={()=>console.log("Wczytaj pokoje na dany termin")}>Wybierz</button>
                 </div>
                 <div>
-                        POKOJE
                         <RoomWindow/>
                 </div>
                 

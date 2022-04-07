@@ -1,20 +1,26 @@
 #Picture
 {
-background-image:url("pokój1os.png");
+    background-image:url("pokój1os.png");
 }
-#Parameters url 
+#roomWindow
 {
-
+    border: 1px solid black;
+    width: 75%;
+    height: auto;
 }
-#bed
+#picture
 {
-background-image: url("bedIcon.png");
+    float: left;
+    width: 25%;
 }
-#airCon
+#parameters
 {
-background-image: url("airConditioningIcon.png");
+    float: left;
+    width: 25%;
+    font-size: 15px;
 }
-#wiFi
+#frm
 {
-background-image: url("WiFiIcon.png");
+    float: left;
+    width: 25%;
 }
