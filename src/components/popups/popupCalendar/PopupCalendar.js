@@ -17,7 +17,6 @@ function PopupCalendar({
       
      >
     <div className='app'>
-      <h1 className='text-center'>React Calendar with Range</h1>
       <div className='calendar-container'>
         <Calendar
           onChange={setDate}
@@ -39,7 +38,7 @@ function PopupCalendar({
         </p>
       )}
     </div>
-    <button onClick={close}>NO KLIKAJ!!</button>
+    <button onClick={close}>Zatwierdź</button>
     </Modal>
   );
 }

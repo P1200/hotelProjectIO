@@ -5,10 +5,8 @@ const RoomWindow = () => {
     return (
         <div>
            <p> Pokój x osobowy</p>
-           <div id="Picture">
+           <div id="Picture"></div>
 
-           </div>
-           <form>
             <div id="Parameters">
                 <ul>
                     <img id="bed"></img><li>Łóżko jednoosobowe</li>
@@ -27,9 +25,9 @@ const RoomWindow = () => {
                     <li>biurko</li>
                     <li>suszarka do włosów</li>
                     <li>balkon</li>
-                    <input type="checkbox">dostawka</input>
-                    <input type="checkbox">śniadanie</input>
                 </ul>
+                {/*<input type="checkbox">dostawka</input>
+                <input type="checkbox">śniadanie</input> */}
             </div>
             <div>
                 <select>
@@ -41,7 +39,6 @@ const RoomWindow = () => {
                 </select>
                 <input type="submit" value="Rezerwuj"></input>
             </div>
-           </form>
         </div>
     )
 }

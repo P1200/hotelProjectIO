@@ -1,0 +1,245 @@
+.contactInformation
+{
+    width: 15%;
+    min-width: fit-content;
+    float: left;
+    display: block;
+    text-align: left;
+    font-size: 20px;
+    margin-left: 15vw;
+    line-height: 2px;
+    
+}
+#cls
+{
+    clear: both;
+}
+#information
+{
+    height: 20vh;
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    
+}
+#information h1
+{
+    margin-bottom: 4vw;
+}
+#salatryImg{
+    width: 100%;
+    height: 22vw;
+    background-image: url('./salatryImg.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-align:right;
+}
+#salatryTab
+{
+    min-height:1050px;
+    background-color: white;
+    background-image: url(/src/components/background/background.png);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 80%;
+    background-attachment: fixed;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Oxygen';
+    font-style: normal;
+    padding-bottom: 30px;
+}
+#contactForm
+{
+    float: left;
+    width: 45%;
+    min-width: 400px;
+    height: 51vh;
+    border: 3px solid #C4C4C4;
+    border-radius:10px;
+    margin-left: 5%;
+    margin-bottom: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: left;
+    background-color: white;
+    font-family: 'Oxygen';
+}
+#map
+{
+    margin-right:100px;
+    float: right;
+    width: 30%;
+    min-width: fit-content;
+    height: 50vh;
+}
+#mailAndMap
+{
+    text-align: center;
+    height: 50vh;
+    width: 100%;
+    margin-top: 20px;
+}
+#note
+{
+    font-size: 15px;
+    margin-left: 4%;
+    height:5%;
+    width: 92%;
+}
+.button
+{
+    color:white;
+    float: right;
+    background-color: #C4B976;
+    border: #C4B976;
+    border-radius: 5px;
+    margin-right: 5%;
+    padding-left:10%;
+    padding-right: 10%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    font-family: Roboto;
+    margin-top: 5%;
+}
+#napis
+{
+    float:left;
+    width: 47%;
+    height:18%;
+    font-size:30px;
+    margin-left: 4%;
+}
+#message
+{
+    border-radius: 5px;
+    border-color: gray;
+    margin-left:4%;
+    margin-top: 2%;
+}
+#email
+{
+    float:right;
+    width: 100%;
+    border-radius: 5px;
+    border-color: gray;
+    height:80%;
+}
+#name
+{
+    width: 100%;
+    border-radius: 5px;
+    border-color: gray;
+    float :left;
+    height:80%;
+}
+#phone
+{
+    float:right;
+    border-radius: 5px;
+    border-color: gray;
+    width:100%;
+    height:80%;
+}
+#msg
+{
+    width: 100%;
+    border-radius: 5px;
+    border-color: gray;
+    float :left;
+    height:100%;
+}
+#header
+{
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 700;
+    font-size:5vw;
+    color: white;
+    float: right;
+    padding-right: 18vw;
+    padding-top:9vw;
+    width: 10%;
+    height: 10%;
+
+}
+#phone_block
+{
+    float: right;
+    width:43%;
+    height: 10%;
+    margin-top:3.8%;
+    margin-right:4%;
+    margin-bottom:4%;
+}
+#email_block
+{
+    float: right;
+   margin-top:6%;
+    width: 43%;
+    margin-right:4%;
+    height:10%;
+}
+#name_block
+{
+    width:43%;
+    height: 10%;
+    margin-top: 5.4%;
+    float: left;
+    margin-left:4%;
+    margin-bottom: 3%;
+}
+#msg_block
+{
+    width:91%;
+    margin-left:4%;
+    height: 25%;
+    margin-bottom: 3%;
+}
+#er_phone
+{
+    float: right;
+    margin-right: 50%;
+    width:50%;
+    font-size: 16px;
+    margin-top:1%;
+    color:red;
+}
+#er_name
+{
+    float: left;
+    margin-right: 50%;
+    width:50%;
+    font-size: 16px;
+    margin-top:1%;
+    margin-left: 1%;
+    color:red;
+}
+#er_email
+{
+    float: right;
+    margin-right: 50%;
+    width:50%;
+    font-size: 16px;
+    margin-top:1%;
+    color:red;
+}
+#er_msg
+{
+    float: left;
+    margin-right: 50%;
+    width:50%;
+    font-size: 16px;
+    margin-top:1%;
+    margin-left: 1%;
+    margin-bottom:0.3%;
+    color:red;
+}
+#napis h2
+{
+    margin-bottom:0px;
+}
