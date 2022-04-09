@@ -25,25 +25,25 @@ const HotelTab = () => {
                         <br/>
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxNkYs6O8BvDgTJEEtcm8LtKvRZpU49kiMzA&usqp=CAU" alt="obrazek" width={50} height={50}/>
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxNkYs6O8BvDgTJEEtcm8LtKvRZpU49kiMzA&usqp=CAU" alt="obrazek" width={50} height={50}/>
-                        <p>Zonacz więcej <AiOutlineRight/></p>
+                        <p>Zobacz więcej <AiOutlineRight/></p>
                     </div>
                     <div id="cls"></div>
                     <div id="rooms">
                         Pokoje
                         <br/>
-                        <div>
+                        <div className='room'>
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxNkYs6O8BvDgTJEEtcm8LtKvRZpU49kiMzA&usqp=CAU" alt="pok 1" width={50} height={50}/>
-                            <p>akis pokoj <AiOutlineRight/></p>
+                            <p>jakis pokoj <AiOutlineRight/></p>
                         </div>
-                        <div>
+                        <div className='room'>
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxNkYs6O8BvDgTJEEtcm8LtKvRZpU49kiMzA&usqp=CAU" alt="pok 2" width={50} height={50}/>
                             <p>jakis pokoj <AiOutlineRight/></p>
                         </div>
-                        <div>
+                        <div className='room'>
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxNkYs6O8BvDgTJEEtcm8LtKvRZpU49kiMzA&usqp=CAU" alt="pok 3" width={50} height={50}/>
                             <p>jakis pokoj <AiOutlineRight/></p>
                         </div>
-                        <div>
+                        <div className='room'>
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxNkYs6O8BvDgTJEEtcm8LtKvRZpU49kiMzA&usqp=CAU" alt="pok 4" width={50} height={50}/>
                             <p>jakis pokoj <AiOutlineRight/></p>
                         </div>
