@@ -27,7 +27,6 @@ const RoomWindow = () => {
                 </p>
                 <input type="checkbox" id="breakfast" name="breakfast" />
                 <label for="breakfasts">Śniadanie</label>
-                przycisk
             </div>
             <p>
                 Liczba pokoi 
@@ -38,7 +37,6 @@ const RoomWindow = () => {
                     <option>4</option>
                 </select>
             </p>
-            <button id="button">Wyślij</button>
         </div>
     )
 }
