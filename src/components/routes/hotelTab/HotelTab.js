@@ -12,7 +12,7 @@ const HotelTab = () => {
                 </div>
                 <div > 
                     <div onClick={()=> setIsHotelHistoryPopup(true)} id="aboutHotel">
-                        Historia
+                        <h2>Historia</h2>
                         <p id="aboutHotelContent">
                         Hotel Fun&Relax założony w roku 2022 przez 4 studentów informatyki pierwszego stopnia z tytułem inżyniera z Zielonej Góry,
                         którzy nie mieli pomysłu na projekt na zaliczenie przedmiotu, jakim jest Inżynieria 
@@ -21,30 +21,34 @@ const HotelTab = () => {
                         </p>
                     </div>
                     <div id="gallery">
-                        Galeria
+                        <h2>Galeria</h2> 
                         <br/>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxNkYs6O8BvDgTJEEtcm8LtKvRZpU49kiMzA&usqp=CAU" alt="obrazek" width={50} height={50}/>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxNkYs6O8BvDgTJEEtcm8LtKvRZpU49kiMzA&usqp=CAU" alt="obrazek" width={50} height={50}/>
+                        <div id='gal1'>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxNkYs6O8BvDgTJEEtcm8LtKvRZpU49kiMzA&usqp=CAU" alt="obrazek" className='obr'/>
+                        </div>
+                        <div id='gal2'>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxNkYs6O8BvDgTJEEtcm8LtKvRZpU49kiMzA&usqp=CAU" alt="obrazek" className='obr'/>
+                        </div>
                         <p>Zobacz więcej <AiOutlineRight/></p>
                     </div>
                     <div id="cls"></div>
                     <div id="rooms">
-                        Pokoje
+                    <h2>Pokoje</h2>
                         <br/>
                         <div className='room'>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxNkYs6O8BvDgTJEEtcm8LtKvRZpU49kiMzA&usqp=CAU" alt="pok 1" width={50} height={50}/>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxNkYs6O8BvDgTJEEtcm8LtKvRZpU49kiMzA&usqp=CAU" alt="pok 1" className='obr'/>
                             <p>jakis pokoj <AiOutlineRight/></p>
                         </div>
                         <div className='room'>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxNkYs6O8BvDgTJEEtcm8LtKvRZpU49kiMzA&usqp=CAU" alt="pok 2" width={50} height={50}/>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxNkYs6O8BvDgTJEEtcm8LtKvRZpU49kiMzA&usqp=CAU" alt="pok 2" className='obr'/>
                             <p>jakis pokoj <AiOutlineRight/></p>
                         </div>
                         <div className='room'>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxNkYs6O8BvDgTJEEtcm8LtKvRZpU49kiMzA&usqp=CAU" alt="pok 3" width={50} height={50}/>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxNkYs6O8BvDgTJEEtcm8LtKvRZpU49kiMzA&usqp=CAU" alt="pok 3" className='obr'/>
                             <p>jakis pokoj <AiOutlineRight/></p>
                         </div>
                         <div className='room'>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxNkYs6O8BvDgTJEEtcm8LtKvRZpU49kiMzA&usqp=CAU" alt="pok 4" width={50} height={50}/>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxNkYs6O8BvDgTJEEtcm8LtKvRZpU49kiMzA&usqp=CAU" alt="pok 4" className='obr'/>
                             <p>jakis pokoj <AiOutlineRight/></p>
                         </div>
                     </div>

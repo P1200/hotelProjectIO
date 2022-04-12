@@ -12,17 +12,19 @@ const SalaryTab = () => {
                 <div id='salatryImg'>
                     <p id="header">CENNIK</p>
                 </div>
-                <div>
-                    <div>Rezerwacja od</div>
-                    <div onClick={()=>setIsPopupCalendar(true)}> data1</div>
-                    do
-                    <div onClick={()=>setIsPopupCalendar(true)}> data2</div>
-                    <button onClick={()=>console.log("Wczytaj pokoje na dany termin")}>Wybierz</button>
-                    <button onClick={()=>setIsPopupReservationForm(true)}>Rezerwuj</button>
+                <div id='placeholder'></div>
+                <button onClick={()=>console.log("Wczytaj pokoje na dany termin")} className='button2'>Wybierz</button>
+                <button onClick={()=>setIsPopupReservationForm(true)} className='button2'>Rezerwuj</button>
+                <div id='reserv'>
+                    <div onClick={()=>setIsPopupCalendar(true)} className='reserv_thng'> data2</div>
+                    <div className='reserv_thng'>do</div>
+                    <div onClick={()=>setIsPopupCalendar(true)} className='reserv_thng'> data1</div>
+                    <div className='reserv_thng'>Rezerwacja od</div>
+                    <div id='cls'></div>
                 </div>
                 <div>
-                        <RoomWindow/>
-                        <RoomWindow/>
+                        <RoomWindow className='pokoj'/>
+                        <RoomWindow className='pokoj'/>
                 </div>
                 
                 <PopupReservationForm

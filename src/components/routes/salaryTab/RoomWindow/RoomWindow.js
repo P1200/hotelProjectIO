@@ -25,18 +25,17 @@ const RoomWindow = () => {
                     <BsCheckLg/>suszarka do włosów
                     <BsCheckLg/>balkon
                 </p>
-                <input type="checkbox" id="breakfast" name="breakfast" />
-                <label for="breakfasts">Śniadanie</label>
             </div>
             <p>
-                Liczba pokoi 
-                <select>
+                Liczba pokoi  
+                <select className='room_count'>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
                     <option>4</option>
                 </select>
             </p>
+            
         </div>
     )
 }
