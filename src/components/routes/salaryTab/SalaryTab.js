@@ -14,7 +14,6 @@ const SalaryTab = () => {
                 </div>
                 <div id='placeholder'></div>
                 <button onClick={()=>console.log("Wczytaj pokoje na dany termin")} className='button2'>Wybierz</button>
-                <button onClick={()=>setIsPopupReservationForm(true)} className='button2'>Rezerwuj</button>
                 <div id='reserv'>
                     <div onClick={()=>setIsPopupCalendar(true)} className='reserv_thng'> data2</div>
                     <div className='reserv_thng'>do</div>
@@ -26,6 +25,7 @@ const SalaryTab = () => {
                         <RoomWindow className='pokoj'/>
                         <RoomWindow className='pokoj'/>
                 </div>
+                <button onClick={()=>setIsPopupReservationForm(true)} className='button2' id='reserv_button'>Rezerwuj</button>
                 
                 <PopupReservationForm
                     open={isPopupReservationForm}

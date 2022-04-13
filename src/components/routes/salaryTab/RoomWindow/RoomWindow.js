@@ -28,7 +28,7 @@ const RoomWindow = () => {
             </div>
             <p>
                 Liczba pokoi  
-                <select className='room_count'>
+                <select>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>

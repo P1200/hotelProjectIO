@@ -54,7 +54,7 @@
 #aboutHotelContent
 {
     overflow:hidden;
-    width: 100%;
+    width: 95%;
     height: 60%;
 }
 #gallery
@@ -72,7 +72,7 @@
 #rooms
 {
     width: 70vw;
-    height: 400px;
+    height: 500px;
     background-color: white;
     border: 1px solid;
     border-radius: 5px;
@@ -86,7 +86,7 @@
     float:left;
     margin-top: 3%;
     margin-left:7%;
-    height:43%;
+    height:40%;
 }
 .title
 {

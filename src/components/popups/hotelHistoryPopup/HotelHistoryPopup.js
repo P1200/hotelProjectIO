@@ -14,7 +14,7 @@ function HotelHistoryPopup({
       <Modal
       open={open}
      >
-       <AiOutlineClose onClick={close} />
+       <AiOutlineClose onClick={close} id="cross"/>
        <div>
         Hotel Fun&Relax założony w roku 2022 przez 4 studentów informatyki pierwszego stopnia z tytułem inżyniera z Zielonej Góry,
         którzy nie mieli pomysłu na projekt na zaliczenie przedmiotu, jakim jest Inżynieria 
