@@ -7,3 +7,95 @@
     background-size: 100%;
     text-align:right;
 }
+#header
+{
+    font-family: 'Oxygen';
+    font-style: normal;
+    font-weight: 700;
+    font-size:5vw;
+    color: white;
+    float: right;
+    padding-right: 18vw;
+    padding-top:5vw;
+    width: 10%;
+    height: 10%;
+}
+#PriceList
+{
+    margin-top: 5vw;
+    float:right;
+    width:25vw;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: gray;
+    margin-right: 20vw;
+    height:40vh;
+}
+#procedure
+{
+    width:60%;
+    margin-left: 5%;
+}
+#prices
+{
+    float:right;
+    width:10%;
+    text-align: right;
+    margin-right: 5%;
+}
+#PriceList h1
+{
+    margin-left:5%
+}
+#SpaStart
+{
+    margin-top: 5vw;
+    width:35vw;
+    height:40vh;
+    margin-left: 15vw;
+    font-size: 9vh;
+}
+#BoombasticSpa
+{
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: gray;
+    font-size:medium;
+    background-color: #C4C4C4;
+    height:74%;
+}
+#objectos
+{
+    width: 60vw;
+    height: 400px;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: gray;
+    margin-top: 5vh;
+    margin-left:18vw;
+    margin-bottom: 5vh;
+}
+.objecto
+{
+    width: 20%;
+    float:left;
+    margin-left:4%;
+    height:57%;
+    text-align: center;
+}
+#pesiota
+{
+    height: 100%;
+    width: 100%;
+}
+#objectos h1
+{
+    font-size: 5vh;
+    margin-left:4%;
+}
+.arrow
+{
+    color: #C4B976;
+}

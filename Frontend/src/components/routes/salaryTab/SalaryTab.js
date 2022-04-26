@@ -15,13 +15,7 @@ const SalaryTab = () => {
                 <div id='salatryImg'>
                     <p id="header">CENNIK</p>
                 </div>
-                <div className='calendar-container'>  
-                    <Calendar
-                    onChange={setDate}
-                    value={date}
-                    selectRange={true}
-                    />
-                </div>
+                
                 
                 <button onClick={()=>console.log("Wczytaj pokoje na dany termin")} className='button2'>Wybierz</button>
                 <div id='reserv'>
@@ -40,6 +34,13 @@ const SalaryTab = () => {
                     </div>
                     <div className='reserv_thng'>Rezerwacja od</div>
                     <div id='cls'></div>
+                </div>
+                <div className='calendar-container'>  
+                    <Calendar
+                    onChange={setDate}
+                    value={date}
+                    selectRange={true}
+                    />
                 </div>
                 <div>
                         <RoomWindow 

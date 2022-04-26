@@ -8,25 +8,10 @@ const SpaTab = () => {
            <div id='spaImg'>
                 <p id="header">STREFA RELAKSU</p>
             </div>
-            <div>
-                Strefa Relaksu
-                <div>
-                    Zachwalanie strefy relaksu
-                </div>
-            </div>
-            <div>
-                Cennik
-                <div>
-                    <div>
-                        <p><BsPlayFill/> Zabieg oczyszczający</p>
-                        <p><BsPlayFill/> Zabieg regenerujący</p>
-                        <p><BsPlayFill/> Masaż twarzy</p>
-                        <p><BsPlayFill/> Masaż twarzy z maską algową</p>
-                        <p><BsPlayFill/> Peeling kawitacyjny</p>
-                        <p><BsPlayFill/> Peeling kawitacyjny</p>
-                        <p><BsPlayFill/> Pakiet zabiegów dla 2 osób</p>
-                    </div>
-                    <div>
+            <div id="PriceList">
+                <h1>Cennik:</h1>
+                <div >
+                    <div id="prices">
                         <p>99zł</p>
                         <p>115zł</p>
                         <p>60zł</p>
@@ -36,23 +21,40 @@ const SpaTab = () => {
                         <p>400zł</p>
 
                     </div>
+                    <div id="procedure">
+                        <p><BsPlayFill className="arrow"/> Zabieg oczyszczający</p>
+                        <p><BsPlayFill className="arrow"/> Zabieg regenerujący</p>
+                        <p><BsPlayFill className="arrow"/> Masaż twarzy</p>
+                        <p><BsPlayFill className="arrow"/> Masaż twarzy z maską algową</p>
+                        <p><BsPlayFill className="arrow"/> Peeling kawitacyjny</p>
+                        <p><BsPlayFill className="arrow"/> Peeling kawitacyjny</p>
+                        <p><BsPlayFill className="arrow"/> Pakiet zabiegów dla 2 osób</p>
+                    </div>
+                    
                 </div>
             </div>
-            <div>
-                Dostępne obiekty
-                <div>
+            <div id="SpaStart">
+                Strefa Relaksu
+                <div id="BoombasticSpa">
+                    Zachwalanie strefy relaksu
+                </div>
+            </div>
+            
+            <div id="objectos">
+                <h1>Dostępne obiekty</h1>
+                <div className="objecto">
                     <div id="pesiota"></div>
                     <p>Prywatne jacuzzi</p>
                 </div>
-                <div>
+                <div className="objecto">
                     <div id="pesiota"></div>
                     <p>Basen wewnętrzny</p>
                 </div>
-                <div>
+                <div className="objecto"> 
                     <div id="pesiota"></div>
                     <p>Pokój do masażu</p>
                 </div>
-                <div>
+                <div className="objecto">
                     <div id="pesiota"></div>
                     <p>Pokój do masażu dla 2 osób z jacuzzi</p>
                 </div>
