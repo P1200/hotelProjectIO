@@ -2,7 +2,9 @@ import './RoomWindow.css';
 import { BsAsterisk, BsWifi, BsCheckLg } from "react-icons/bs";
 import { IoIosBed } from "react-icons/io";
 
-const RoomWindow = () => {
+const RoomWindow = ({
+    price
+}) => {
 
     return (
         <div id="roomWindow">
@@ -26,8 +28,9 @@ const RoomWindow = () => {
                     <BsCheckLg/>balkon
                 </p>
             </div>
+            Cena za pokój: {price} zł
             <p>
-                Liczba pokoi  
+                Liczba pokój
                 <select>
                     <option>1</option>
                     <option>2</option>
