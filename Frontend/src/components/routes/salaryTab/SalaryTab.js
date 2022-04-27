@@ -22,10 +22,10 @@ const SalaryTab = () => {
                     <div className='reserv_thng'>
                         {date.length > 0 ? (
                             <p>
-                            {date[0].toDateString()}
+                            
                             {dateStart=date[0].toDateString()}
                             do
-                            {date[1].toDateString()}
+                            
                             {dateEnd=date[0].toDateString()}
 
                             </p>
@@ -63,7 +63,7 @@ const SalaryTab = () => {
                 />
                 <div className='app'>
       
-      
+      {console.log(dateStart)}
     </div>
             
             </div>
