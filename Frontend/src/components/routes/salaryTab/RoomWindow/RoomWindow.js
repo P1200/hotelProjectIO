@@ -37,8 +37,7 @@ const RoomWindow = ({
                     <option>3</option>
                     <option>4</option>
                 </select>
-            </p>
-            
+            </p> 
         </div>
     )
 }

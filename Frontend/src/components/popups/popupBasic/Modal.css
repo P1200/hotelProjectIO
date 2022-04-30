@@ -9,7 +9,6 @@
     border-radius: 12px;
     border-bottom-left-radius: 20;
 }
-
 .OVERLAY_STYLES {
     position: 'fixed';
     top: 0;
@@ -20,5 +19,3 @@
     z-Index: 1000;
     border-radius: 12px;
 }
-
-/* Needs to be fixed */

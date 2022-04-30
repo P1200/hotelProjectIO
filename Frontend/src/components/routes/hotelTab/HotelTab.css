@@ -118,13 +118,13 @@
 }
 #gal1
 {
-float:left;
-height: 58%;
-width:50%;
+    float:left;
+    height: 58%;
+    width:50%;
 }
 #gal2
 {
-float:right;
-height: 58%;
-width:50%;
+    float:right;
+    height: 58%;
+    width:50%;
 }

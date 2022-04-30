@@ -19,7 +19,6 @@ const SpaTab = () => {
                         <p>150zł</p>
                         <p>200zł</p>
                         <p>400zł</p>
-
                     </div>
                     <div id="procedure">
                         <p><BsPlayFill className="arrow"/> Zabieg oczyszczający</p>
@@ -30,7 +29,6 @@ const SpaTab = () => {
                         <p><BsPlayFill className="arrow"/> Peeling kawitacyjny</p>
                         <p><BsPlayFill className="arrow"/> Pakiet zabiegów dla 2 osób</p>
                     </div>
-                    
                 </div>
             </div>
             <div id="SpaStart">
@@ -39,7 +37,6 @@ const SpaTab = () => {
                     Zachwalanie strefy relaksu
                 </div>
             </div>
-            
             <div id="objectos">
                 <h1>Dostępne obiekty</h1>
                 <div className="objecto">
