@@ -33,7 +33,7 @@ const SpaTab = () => {
             </div>
             <div id="SpaStart">
                 Strefa Relaksu
-                <div id="BoombasticSpa">
+                <div id="aboutSpa">
                     Zachwalanie strefy relaksu
                 </div>
             </div>

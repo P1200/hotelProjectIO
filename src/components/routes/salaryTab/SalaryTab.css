@@ -39,8 +39,6 @@
     font-weight: 400;
     font-size: 25px;
     font-family: Roboto;
-    margin-right:13vw;
-    margin-top:5vh;
     float:right;
 }
 #header
@@ -74,7 +72,8 @@
 .reserv_thng
 {
     float:right;
-    margin-right:2%;
+    text-align: right;
+    width: 100%;
 }
 .pokoj
 {
@@ -188,4 +187,11 @@ abbr[title]
     border-bottom-right-radius: 6px;
     background: #C4B976;
     color: white;
+}
+#WhichDate
+{
+    width: 43%;
+    margin: 0;
+    margin-right: 1%;
+    float: right;
 }
