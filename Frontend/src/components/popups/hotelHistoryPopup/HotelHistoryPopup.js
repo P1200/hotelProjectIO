@@ -1,6 +1,5 @@
-
 import { useState } from 'react';
-import Modal from "../popupBasic/Modal"
+import Modal from "../popupBasic/Modal";
 import './HotelHistoryPopup.css';
 import { AiOutlineClose } from "react-icons/ai";
 
@@ -8,9 +7,7 @@ function HotelHistoryPopup({
   open,
   close
 }) {
-  const [date, setDate] = useState(new Date());
-
-  return (
+    return (
       <Modal
       open={open}
      >

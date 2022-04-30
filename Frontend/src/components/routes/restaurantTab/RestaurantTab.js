@@ -22,10 +22,8 @@ const RestaurantTab = () => {
                 <p>
                     <p><BsPlayFill/>Szarlotka na ciepło</p>
                     <p>z sosem czekoladowym, lodami i bitą śmietaną</p>
-                </p> 
-
+                </p>
             </div>
-
             <div>
                 Oferta
                 <div> 

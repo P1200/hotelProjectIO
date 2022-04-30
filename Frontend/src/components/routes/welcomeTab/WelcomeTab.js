@@ -12,7 +12,6 @@ const WelcomeTab = () => {
                    <h4>Siemaneczko mordeczki!!!</h4>
                     Tu będzie tekst witający naszych gości. Zachęta do rezerwacji pokoju. Coś o okolicy. Taki chwyt, żebyśmy mogi szybko zarobić miliony!
                 </div>
-                
             </div>
         </div>
     )

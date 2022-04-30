@@ -10,7 +10,7 @@ export default function ContactTab ()
         phone: yup.string(),
         mail: yup.string().email("Nieprawidłowy adres email").required("Pole wymagane"),
         msg: yup.string().required("Pole wymagane"),
-      });
+    });
     const [name, setName] = useState('');
     const [mail, setMail] = useState('');
     const [phone, setPhone] = useState('');
@@ -18,7 +18,6 @@ export default function ContactTab ()
     const [errors, setErrors] = useState({});
     const onSubmit = async e => {
         e.preventDefault();
-    
         const data = { name, phone, mail, msg };
         try {
           await schema.validate(data, {abortEarly: false});
@@ -84,7 +83,6 @@ export default function ContactTab ()
                             }} />
                             {errors.name && <p id="er_name">{errors.msg}</p>}
                         </div>
-
                         <div id="phone_block">
                             <input id="phone" placeholder="Numer telefonu" value={phone} onChange={e => {
                                 setPhone(e.target.value);
@@ -103,12 +101,11 @@ export default function ContactTab ()
                             Administratorem danych osobowych jest Fun&Relax Hotel 00-002, ULICA JESIENNA 23, podane przez Ciebie dane będziemy przetwarzać w celu udzielenia odpowiedzi na przesłane zapytanie (art. 6 ust. 1 lit. f RODO).
                         </div>
                         <button className="button" >Wyślij</button>       
-
                     </form>
                 </div>
                 <div id="map">
                      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6932.582436927996!2d15.726014361581637!3d52.097239516268615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spl!2spl!4v1648241788378!5m2!1spl!2spl" width="100%" height="100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                 </div>
+                </div>
             </div>
         </div>
     )
