@@ -11,7 +11,7 @@ import pl.mwlzg.funandrelaxhotel.sqltables.ClientExists;
 
 
 @Repository
-public class DatabaseRepository {
+public class ClientRepository {
 
     @Autowired
     JdbcTemplate jdbcTemplate;
