@@ -1,4 +1,4 @@
-package pl.mwlzg.funandrelaxhotel;
+package pl.mwlzg.funandrelaxhotel.repositories;
 
 
 import org.springframework.stereotype.Repository;
@@ -21,7 +21,6 @@ public class GalleryRepository {
             auxiliary=Files.walk(Paths.get("\\ProjektHotel\\Backend\\Pictures"))
                     .filter(Files::isRegularFile)
                     .toList();
-            //TODO coś tu źle zwraca
         } catch (IOException e) {
             e.printStackTrace();
         }
