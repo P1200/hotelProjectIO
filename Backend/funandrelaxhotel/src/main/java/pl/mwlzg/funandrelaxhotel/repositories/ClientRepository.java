@@ -1,4 +1,4 @@
-package pl.mwlzg.funandrelaxhotel;
+package pl.mwlzg.funandrelaxhotel.repositories;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
