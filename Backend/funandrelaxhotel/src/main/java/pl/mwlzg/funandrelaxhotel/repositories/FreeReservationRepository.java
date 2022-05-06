@@ -7,22 +7,28 @@ import org.springframework.stereotype.Repository;
 import pl.mwlzg.funandrelaxhotel.sqltables.FreeReservation;
 
 import java.sql.Date;
+import java.util.List;
 
 @Repository
 public class FreeReservationRepository {
     @Autowired
     JdbcTemplate jdbcTemplate;
 
-    public FreeReservation getFreeReservations (Date from, Date to) {
+    public List<FreeReservation> getFreeReservations (Date from, Date to) {
 
-        return jdbcTemplate.queryForObject(
+        return jdbcTemplate.query(
                 """
-                        SELECT COUNT(*) AS room_count,room_id,prise,kind,description,path FROM(
-                        SELECT arrival_date,departure_date,reservation.room_id,prise,room.kind,description,path
+                        SELECT COUNT(*) AS room_count,prise,kind,description,path FROM(
+                        SELECT DISTINCT reservation.room_id,prise,room.kind,description,path
                         FROM reservation INNER JOIN (room INNER JOIN room_kind ON room.kind=room_kind.kind) ON reservation.room_id=room.room_id
-                        GROUP BY reservation.room_id
-                        HAVING arrival_date NOT BETWEEN ? AND ? AND departure_date NOT BETWEEN ? AND ?
-                        ) AS pom GROUP BY kind""",
+                        WHERE reservation.room_id NOT IN (
+                        SELECT room_id FROM(
+                        SELECT arrival_date,departure_date,reservation.room_id
+                        FROM reservation INNER JOIN room ON reservation.room_id=room.room_id
+                        WHERE arrival_date BETWEEN ? AND ? AND departure_date BETWEEN ? AND ?
+                        ) AS pom
+                        )
+                        ) AS pom2 GROUP BY kind""",
                 BeanPropertyRowMapper.newInstance(FreeReservation.class),
                 from,to,from,to
         );
