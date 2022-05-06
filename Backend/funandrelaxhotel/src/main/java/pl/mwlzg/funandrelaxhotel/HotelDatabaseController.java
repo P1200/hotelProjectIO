@@ -11,6 +11,7 @@ import pl.mwlzg.funandrelaxhotel.repositories.RoomRepository;
 import pl.mwlzg.funandrelaxhotel.sqltables.*;
 
 import java.sql.Date;
+import java.util.List;
 
 @RestController
 public class HotelDatabaseController {
@@ -45,8 +46,8 @@ public class HotelDatabaseController {
     }
 
     @GetMapping("/reservation/arrival/{arrival_date}/departure/{departure_date}")
-    public FreeReservation getFreeReservations(@PathVariable("arrival_date")Date arrival_date,
-                                               @PathVariable("departure_date")Date departure_date)
+    public List<FreeReservation> getFreeReservations(@PathVariable("arrival_date")Date arrival_date,
+                                    @PathVariable("departure_date")Date departure_date)
     {
         return freeReservationRepository.getFreeReservations(arrival_date,departure_date);
     }
