@@ -4,10 +4,7 @@ package pl.mwlzg.funandrelaxhotel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import pl.mwlzg.funandrelaxhotel.repositories.ClientRepository;
-import pl.mwlzg.funandrelaxhotel.repositories.FreeReservationRepository;
-import pl.mwlzg.funandrelaxhotel.repositories.GalleryRepository;
-import pl.mwlzg.funandrelaxhotel.repositories.RoomRepository;
+import pl.mwlzg.funandrelaxhotel.repositories.*;
 import pl.mwlzg.funandrelaxhotel.sqltables.*;
 
 import java.sql.Date;
@@ -24,6 +21,8 @@ public class HotelDatabaseController {
     RoomRepository roomRepository;
     @Autowired
     FreeReservationRepository freeReservationRepository;
+    @Autowired
+    ContactFormRepository contactFormRepository;
 
     @GetMapping("/client/{pesel}")
     public ClientExists checkIfExists(@PathVariable("pesel") String pesel){
@@ -50,5 +49,10 @@ public class HotelDatabaseController {
                                     @PathVariable("departure_date")Date departure_date)
     {
         return freeReservationRepository.getFreeReservations(arrival_date,departure_date);
+    }
+
+    @PostMapping("/form")
+    public HttpStatus postContactForm (@RequestBody ContactFormData contactFormData){
+        return contactFormRepository.postContactForm(contactFormData);
     }
 }
