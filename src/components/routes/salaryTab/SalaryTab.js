@@ -64,4 +64,4 @@ const SalaryTab = () => {
     )
 }
 
-export default SalaryTab;
+export default SalaryTab; 
