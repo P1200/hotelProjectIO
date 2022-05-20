@@ -18,7 +18,10 @@ public class GalleryRepository {
 
     public GalleryImages getAllPaths (){
         try {
-            auxiliary=Files.walk(Paths.get("\\ProjektHotel\\Backend\\Pictures"))
+            Path currentRelativePath = Paths.get("");
+            System.out.println("------------");
+            System.out.println("Path to the class: "+currentRelativePath.toAbsolutePath());
+            auxiliary=Files.walk(Paths.get(currentRelativePath.toAbsolutePath()+"\\..\\Pictures"))
                     .filter(Files::isRegularFile)
                     .toList();
         } catch (IOException e) {

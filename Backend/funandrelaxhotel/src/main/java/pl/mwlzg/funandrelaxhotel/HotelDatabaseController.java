@@ -23,6 +23,8 @@ public class HotelDatabaseController {
     FreeReservationRepository freeReservationRepository;
     @Autowired
     ContactFormRepository contactFormRepository;
+    @Autowired
+    ReservationRepository reservationRepository;
 
     @GetMapping("/client/{pesel}")
     public ClientExists checkIfExists(@PathVariable("pesel") String pesel){
@@ -54,5 +56,16 @@ public class HotelDatabaseController {
     @PostMapping("/form")
     public HttpStatus postContactForm (@RequestBody ContactFormData contactFormData){
         return contactFormRepository.postContactForm(contactFormData);
+    }
+
+    @PostMapping("/reservation")
+    public  HttpStatus postReservation(@RequestBody Reservation reservation){
+        return reservationRepository.postReservation(reservation,
+                freeReservationRepository.getFreeReservationIds(
+                        reservation.getArrival_date(),
+                        reservation.getDeparture_date(),
+                        reservation.getKind()
+                )
+        );
     }
 }

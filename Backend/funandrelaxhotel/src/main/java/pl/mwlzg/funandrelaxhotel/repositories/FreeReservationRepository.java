@@ -5,6 +5,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 import pl.mwlzg.funandrelaxhotel.sqltables.FreeReservation;
+import pl.mwlzg.funandrelaxhotel.sqltables.FreeRoomId;
 
 import java.sql.Date;
 import java.util.List;
@@ -31,6 +32,27 @@ public class FreeReservationRepository {
                         ) AS pom2 GROUP BY kind""",
                 BeanPropertyRowMapper.newInstance(FreeReservation.class),
                 from,to,from,to
+        );
+    }
+
+    public List<FreeRoomId> getFreeReservationIds (Date from, Date to, String kind) {
+
+        return jdbcTemplate.query(
+                """
+                        SELECT room_id FROM(
+                        SELECT room_id,kind FROM(
+                        SELECT DISTINCT reservation.room_id,room.kind
+                        FROM reservation INNER JOIN (room INNER JOIN room_kind ON room.kind=room_kind.kind) ON reservation.room_id=room.room_id
+                        WHERE reservation.room_id NOT IN (
+                        SELECT room_id FROM(
+                        SELECT arrival_date,departure_date,reservation.room_id
+                        FROM reservation INNER JOIN room ON reservation.room_id=room.room_id
+                        WHERE arrival_date BETWEEN ? AND ? AND departure_date BETWEEN ? AND ?
+                        ) AS pom
+                        )
+                        )  WHERE kind = ? )""",
+                BeanPropertyRowMapper.newInstance(FreeRoomId.class),
+                from,to,from,to,kind
         );
     }
 }
