@@ -6,8 +6,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Room {
-    @NonNull private Integer room_id;
-    @NonNull private Double price;
+    @NonNull private Double prise;
     @NonNull private String kind;
     @NonNull private String description;
     @NonNull private String path;

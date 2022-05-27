@@ -36,9 +36,9 @@ public class HotelDatabaseController {
         return clientRepository.postClient(client);
     }
 
-    @GetMapping("/room/{room_id}")
-    public Room getRoomById(@PathVariable("room_id") int room_id){
-        return roomRepository.getRoomById(room_id);
+    @GetMapping("/room")
+    public List<Room> getRoomById(){
+        return roomRepository.getRoomById();
     }
 
     @GetMapping("/gallery")

@@ -13,11 +13,10 @@ import java.util.List;
 
 @Repository
 public class GalleryRepository {
-    private ArrayList<String> listPaths;
     private List<Path> auxiliary;
 
     public GalleryImages getAllPaths (){
-        listPaths=new ArrayList<>();
+        ArrayList<String> listPaths = new ArrayList<>();
         try {
             Path currentRelativePath = Paths.get("");
             System.out.println("------------");
