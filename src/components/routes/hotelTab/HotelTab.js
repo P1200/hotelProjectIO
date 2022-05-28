@@ -2,9 +2,11 @@ import './HotelTab.css';
 import HotelHistoryPopup from "../../popups/hotelHistoryPopup/HotelHistoryPopup";
 import React, {useState } from 'react';
 import { AiOutlineRight } from "react-icons/ai";
+import {getGallery} from "./../../../apiOperations/apiGet";
 
 const HotelTab = () => {
     const [isHotelHistoryPopup,setIsHotelHistoryPopup]=useState(false);
+    const images=getGallery();
     return (
         <div id='hotelTab'>
             <div id='hotelImg'>
@@ -12,6 +14,7 @@ const HotelTab = () => {
             </div>
             <div > 
                 <div onClick={()=> setIsHotelHistoryPopup(true)} id="aboutHotel">
+                    
                     <h2>Historia</h2>
                     <p id="aboutHotelContent">
                     Hotel Fun&Relax założony w roku 2022 przez 4 studentów informatyki pierwszego stopnia z tytułem inżyniera z Zielonej Góry,
@@ -53,7 +56,7 @@ const HotelTab = () => {
                         </div>
                 </div>
             </div>
-
+            <button onClick={async()=> {console.log(await getGallery())}}>sdfsf</button> {/* healper */}
             <HotelHistoryPopup
                 open={isHotelHistoryPopup}
                 close={()=> setIsHotelHistoryPopup(false)}

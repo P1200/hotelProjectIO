@@ -7,7 +7,8 @@ function PopupReservationForm({
     open,
     close,
     dateStart,
-    dateEnd
+    dateEnd,
+    bookedVisitArray
   }) {
     const schema = yup.object().shape({
       name: yup.string().required("Pole wymagane").min(2,"Minimum 2 znaki"), 
@@ -15,6 +16,7 @@ function PopupReservationForm({
       mail: yup.string().email("Nieprawidłowy adres email").required("Pole wymagane"),
       IDN: yup.string().required("Pole wymagane").min(9, "Minimum 9 znaki")
     });
+    let sum=0;
     const [name, setName] = useState('');
     const [mail, setMail] = useState('');
     const [surname, setSurname] = useState('');
@@ -38,7 +40,6 @@ function PopupReservationForm({
           setErrors(errors);
         }
       }
-
   return (
       <Modal
         open={open}   
@@ -49,10 +50,15 @@ function PopupReservationForm({
             <h2>Twoja Rezerwacja</h2>
             <div>
               <div>Termin: {dateStart}-{dateEnd}</div>
-              <div>Liczba pokoi 1 osobowych: 2</div>
-              <div>Liczba pokoi 2 osobowych: 0</div>
-              <div>Liczba pokoi 4 osobowych: 0</div>
-              <div>Liczba pokoi VIP: 0</div>
+              
+                { bookedVisitArray.map((room)=>{
+                  sum+=room.value*room.prise;
+                  return(
+                  <div key={room.kind}>
+                    {room.kind}: {room.value}
+                  </div>
+                  )})}
+              
 
               <input type="checkbox" id="breakfast" name="breakfast"></input>Śniadnie
             </div>
@@ -95,10 +101,17 @@ function PopupReservationForm({
                 <label for="Gotówka">Gotówka</label>
               </div>
             </div>
-            Do zapłaty: 200zł
+            Do zapłaty: {sum}
+            
             <div>
               <button onClick={close}>Anuluj </button> 
-              <button>Rezerwuj</button>   
+              <button onClick={ ()=>{
+                //rezerwuj
+              }
+
+              }>
+                  Rezerwuj
+              </button>   
             </div>     
           </form>
         </div>
