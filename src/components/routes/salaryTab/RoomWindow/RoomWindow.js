@@ -3,13 +3,16 @@ import { BsAsterisk, BsWifi, BsCheckLg } from "react-icons/bs";
 import { IoIosBed } from "react-icons/io";
 
 const RoomWindow = ({
-    price
+    image,
+    price,
+    roomName,
+    howMannyAvaliabeRooms,
+    tmpHowManyReserved
 }) => {
-
     return (
         <div id="roomWindow">
-            <div> Pokój x osobowy</div>
-            <div id="picture">zdjecie</div>
+            <div> {roomName}</div>
+            <div id="picture">{image}</div>
             <div id="parameters">
                 <p><IoIosBed/> Łóżko jednoosobowe</p>
                 <p><BsAsterisk/>  Klimatyzacja</p>
@@ -30,13 +33,8 @@ const RoomWindow = ({
             </div>
             Cena za pokój: {price} zł
             <p>
-                Liczba pokój
-                <select>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                </select>
+               <p>  Liczba wolnych pokoi: {howMannyAvaliabeRooms}</p>
+               <p>  Liczba zarezerwowanych pokoi: {tmpHowManyReserved}</p>
             </p> 
         </div>
     )
