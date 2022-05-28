@@ -1,5 +1,7 @@
 import './AttractionsTab.css';
-
+import amusementParkImg from "./images/amusementParkImg.png";
+import paintballImg from "./images/paintballImg.png";
+import ropeParkImg from "./images/ropeParkImg.png";
 const AttractionsTab = () => {
 
     return (
@@ -13,15 +15,15 @@ const AttractionsTab = () => {
             <div id="attractions">
                 <h1>Dostępne obiekty</h1>
                 <div className='attract'>
-                    <div className="pesiota"/>
+                    <img src={amusementParkImg} width="200" height="100" />
                        Wesołe miasteczko
                 </div>
                 <div className='attract'>
-                    <div className="pesiota"/>
+                    <img src={ropeParkImg} width="200" height="100" />
                         Park linowy
                 </div>
                 <div className='attract'>
-                    <div className="pesiota"/>
+                    <img src={paintballImg} width="200" height="100" />
                         Paintball
                 </div>
             </div>
