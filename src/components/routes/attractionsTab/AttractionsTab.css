@@ -2,11 +2,12 @@
 {
     width: 100%;
     height: 22vw;
-    background-image: url('./attractionImg.png');
+    background-image: url('./images/attractionImg.png');
     background-repeat: no-repeat;
     background-size: 100%;
     text-align:right;
 }
+/*
 .pesiota
 {
     background-image: url('./pesiota.jpg');
@@ -15,6 +16,7 @@
     float: left;
     background-size: 100%;
 }
+*/
 #promo
 {
     font-family: 'Oxygen';

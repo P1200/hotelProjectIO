@@ -6,17 +6,15 @@ import PopupReservationForm from "../../popups/popupReservationForm/PopupReserva
 import './SalaryTab.css';
 import moment from 'moment';
 import {getAvaliabeRooms} from "./../../../apiOperations/apiGet";
+import { isCursorAtEnd } from '@testing-library/user-event/dist/utils';
 
 const SalaryTab = () => {
     const [date, setDate] = useState(new Date());
     const [isPopupReservationForm, setIsPopupReservationForm]=useState(false);
     const [avaliabeRooms, setAvaliabeRooms]=useState([]);
-    const [roomsToBook, setRoomsToBook]=useState([]);
-    const [howManyRooms, setHowManyRooms]=useState([]);
     const [bookedVisitArray, setBookedVisitArray]=useState([]);
-
-
-    const [mail, setMail] = useState('');
+    const [daysBetween,setDaysBetween] = useState(new Date().getDate());
+    const currentDate = new Date();
 
     let dateStart,dateEnd;
     return (
@@ -29,9 +27,9 @@ const SalaryTab = () => {
                     <div className='reserv_thng'>
                         <button 
                             onClick={async ()=>{
-                                setRoomsToBook([]);
                                 let date1=moment(date[0]).format('YYYY-MM-DD');
                                 let date2=moment(date[1]).format('YYYY-MM-DD');
+                                setDaysBetween(new Date(moment(date[1])).getDate()-new Date(moment(date[0])).getDate());
                                 let tmp= await getAvaliabeRooms(date1,date2);
                                 let i=0;
                                 let array=[];
@@ -51,8 +49,7 @@ const SalaryTab = () => {
                                    array2.push(tmpRoomsToBook)
                                 })
                                 setAvaliabeRooms(array);
-                                setBookedVisitArray(array2)
-                                setHowManyRooms(tmp.length); //?                                
+                                setBookedVisitArray(array2)                           
                         }} 
                         className='button2'>
                             Wybierz
@@ -98,16 +95,13 @@ const SalaryTab = () => {
                         tmpHowManyReserved={
                             <input type="number" min={0} max={room.roomCount} id={"input"+room.kind} placeholder={0}  onChange={e => {
                                 bookedVisitArray[room.id].value=e.target.value
-                                
-                                setMail(e.target.value)
-                               // setErrors({});
                             }} />
                         }
                     />)
                  })}
                 
             </div>
-            <button onClick={()=>setIsPopupReservationForm(true)} className='button2' id='reserv_button'>Rezerwuj</button>
+            {avaliabeRooms.length!=0 ? <button onClick={()=>setIsPopupReservationForm(true)} className='button2' id='reserv_button'>Rezerwuj</button>:""}
     
             <PopupReservationForm
                 open={isPopupReservationForm}
@@ -115,6 +109,7 @@ const SalaryTab = () => {
                 dateStart={dateStart}
                 dateEnd={dateEnd}
                 bookedVisitArray={bookedVisitArray}
+                howLong={daysBetween}
             /> 
         </div>
     )

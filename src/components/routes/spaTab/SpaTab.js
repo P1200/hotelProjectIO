@@ -1,6 +1,10 @@
 import './SpaTab.css';
 import { BsPlayFill } from "react-icons/bs";
 import { BsDot } from "react-icons/bs";
+import jacuzziImg from "./images/jacuzziImg.png";
+import massageAndJauzzi from "./images/massageAndJauzzi.png";
+import massageImg from "./images/massageImg.png";
+import swimmingPool from "./images/swimmingPool.png";
 const SpaTab = () => {
 
     return (
@@ -42,19 +46,19 @@ const SpaTab = () => {
             <div id="objectos">
                 <h1>Dostępne obiekty</h1>
                 <div className="objecto">
-                    <div id="pesiota"></div>
+                    <img src={jacuzziImg} width="200" height="100" />
                     <p>Prywatne jacuzzi</p>
                 </div>
                 <div className="objecto">
-                    <div id="pesiota"></div>
+                    <img src={swimmingPool} width="200" height="100" />
                     <p>Basen wewnętrzny</p>
                 </div>
                 <div className="objecto"> 
-                    <div id="pesiota"></div>
+                    <img src={massageImg} width="200" height="100" />
                     <p>Pokój do masażu</p>
                 </div>
                 <div className="objecto">
-                    <div id="pesiota"></div>
+                    <img src={massageAndJauzzi} width="100%" height="100%" />
                     <p>Pokój do masażu dla 2 osób z jacuzzi</p>
                 </div>
             </div>
