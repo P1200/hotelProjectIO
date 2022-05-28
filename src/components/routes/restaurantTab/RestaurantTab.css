@@ -3,19 +3,20 @@
 {
     width: 100%;
     height: 22vw;
-    background-image: url('./restaurantImg.png');
+    background-image: url('./images/restaurantImg.png');
     background-repeat: no-repeat;
     background-size: 100%;
     text-align:right;
     color: aliceblue;
 }
+/*
 #pesiota
 {
-    background-image: url('./pesiota.jpg');
     height: 100%;
     width: 100%;
     background-size: 100%;
 }
+*/
 #headerRest
 {
     font-family: 'Oxygen';

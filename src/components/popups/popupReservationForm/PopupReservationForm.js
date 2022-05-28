@@ -8,7 +8,8 @@ function PopupReservationForm({
     close,
     dateStart,
     dateEnd,
-    bookedVisitArray
+    bookedVisitArray,
+    howLong
   }) {
     const schema = yup.object().shape({
       name: yup.string().required("Pole wymagane").min(2,"Minimum 2 znaki"), 
@@ -101,7 +102,7 @@ function PopupReservationForm({
                 <label for="Gotówka">Gotówka</label>
               </div>
             </div>
-            <div id='topay'>Do zapłaty: {sum}</div>
+            <div id='topay'>Do zapłaty: {sum=sum*howLong}</div>
             
             <div>
               <button id='cancel' onClick={close}>Anuluj </button> 

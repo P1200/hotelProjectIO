@@ -1,9 +1,14 @@
 import './RestaurantTab.css';
 import { BsPlayFill } from "react-icons/bs";
 import { AiOutlineRight } from "react-icons/ai";
-
+import React, { useEffect, useState } from 'react';
+import  RestaurantMenu from "../../popups/restaurantMenu/RestaurantMenu";
+import  BreakfastOffer from "../../popups/breakfastOffer/BreakfastOffer";
+import breakfastOfferImg from "./images/breakfastOfferImg.png"
+import restaurantMenuImg from "./images/restaurantMenuImg.png"
 const RestaurantTab = () => {
-
+    const [isRestaurantMenu, setIsRestaurantMenu]=useState(false);
+    const [isBreakfastOffer, setIsBreakfastOffer]=useState(false);
     return (
         <div >
             <div id="restaurantImg"> 
@@ -34,15 +39,23 @@ const RestaurantTab = () => {
             
             <div id="offers">
                 <h1>Oferta</h1>
-                <div className='offer'> 
-                    <div id="pesiota"></div>
+                <div className='offer' onClick={()=>setIsBreakfastOffer(true)}> 
+                    <img src={breakfastOfferImg} width="200" height="100" />
                     Śniadania <AiOutlineRight/>
                 </div>
-                <div className='offer'>
-                    <div id="pesiota"></div>
+                <div className='offer' onClick={()=>setIsRestaurantMenu(true)}>
+                <img src={restaurantMenuImg} width="200" height="100" />
                     Menu Restauracyjne <AiOutlineRight/>
                 </div>
             </div>
+            <RestaurantMenu
+            open={isRestaurantMenu}
+            close={()=>setIsRestaurantMenu(false)}
+            />
+            <BreakfastOffer
+            open={isBreakfastOffer}
+            close={()=>setIsBreakfastOffer(false)}
+            />
         </div>
     )
 }
