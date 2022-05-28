@@ -47,8 +47,8 @@ function PopupReservationForm({
       >
         <div> 
           <form  onSubmit={onSubmit}>
-            <h2>Twoja Rezerwacja</h2>
-            <div>
+            <h2 id='head'>Twoja Rezerwacja</h2>
+            <div id='datebreakfast'>
               <div>Termin: {dateStart}-{dateEnd}</div>
               
                 { bookedVisitArray.map((room)=>{
@@ -62,30 +62,30 @@ function PopupReservationForm({
 
               <input type="checkbox" id="breakfast" name="breakfast"></input>Śniadnie
             </div>
-            <div>
+            <div id='tofill'>
               <h3>Dane osobowe</h3>
-              <div>
+              <div  className='filling'>
                 <input placeholder="Imię" value={name} onChange={e => {
                   setName(e.target.value);
                   setErrors({});
                 }} />
                 {errors.name && <p >{errors.name}</p>}
               </div>
-              <div>
+              <div  className='filling'>
                 <input placeholder="Nazwisko" value={surname} onChange={e => {
                 setSurname(e.target.value);
                 setErrors({});
               }} />
               {errors.surname && <p >{errors.surname}</p>}
               </div>
-              <div>
+              <div  className='filling'>
                 <input placeholder="Pesel" value={IDN} onChange={e => {
                   setIDN(e.target.value);
                   setErrors({});
                 }} />
                 {errors.IDN && <p >{errors.IDN}</p>}
               </div>
-              <div>
+              <div  className='filling'>
                 <input placeholder="Email" value={mail} onChange={e => {
                 setMail(e.target.value);
                 setErrors({});
@@ -101,11 +101,11 @@ function PopupReservationForm({
                 <label for="Gotówka">Gotówka</label>
               </div>
             </div>
-            Do zapłaty: {sum}
+            <div id='topay'>Do zapłaty: {sum}</div>
             
             <div>
-              <button onClick={close}>Anuluj </button> 
-              <button onClick={ ()=>{
+              <button id='cancel' onClick={close}>Anuluj </button> 
+              <button id='book'onClick={ ()=>{
                 //rezerwuj
               }
 

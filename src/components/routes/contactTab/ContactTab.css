@@ -8,6 +8,9 @@
     font-size: 20px;
     margin-left: 15vw;
     line-height: 2px;
+    border: 1px solid #C4B976;
+    background-color: white;
+    border-radius:10px;
 }
 #cls
 {

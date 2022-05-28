@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap');
 #restaurantImg
 {
     width: 100%;
@@ -11,8 +12,8 @@
 #pesiota
 {
     background-image: url('./pesiota.jpg');
-    width: 100px;
-    height: 100px;
+    height: 100%;
+    width: 100%;
     background-size: 100%;
 }
 #headerRest
@@ -30,6 +31,7 @@
 }
 #RestMenu
 {
+    font-family: 'Oxygen';
     margin-top: 5vw;
     float:right;
     width:25vw;
@@ -38,13 +40,14 @@
     border-radius: 5px;
     border-color: gray;
     margin-right: 20vw;
-    height:45vh;
+    height:35vh;
 }
 #RestaStart
 {
+    font-family: 'Oxygen';
     margin-top: 5vw;
     width:35vw;
-    height:45vh;
+    height:32vh;
     margin-left: 15vw;
     font-size: 9vh;
 }
@@ -54,11 +57,12 @@
     border-radius: 5px;
     border-color: gray;
     font-size:medium;
-    background-color: #C4C4C4;
+    background-color: white;
     height:74%;
 }
 #offers
 {
+    font-family: 'Oxygen';
     width: 60vw;
     height: 400px;
     background-color: white;
@@ -109,4 +113,12 @@
 {
     float:right;
     margin-right: 5%;
+}
+.restInfo
+{
+    font-size: larger;
+    font-weight: bolder;
+    margin-left: 2% ;
+    margin-top: 2%;
+    margin-bottom: 7%;
 }

@@ -10,8 +10,71 @@
 .pesiota
 {
     background-image: url('./pesiota.jpg');
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
     float: left;
     background-size: 100%;
+}
+#promo
+{
+    font-family: 'Oxygen';
+    font-size: 100px;
+    margin-left: 5%;
+}
+#attractions
+{
+    font-family: 'Oxygen';
+    width: 60vw;
+    height: 400px;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: gray;
+    margin-top: 5vh;
+    margin-left:18vw;
+    margin-bottom: 5vh;
+}
+#descs
+{
+    font-family: 'Oxygen';
+    width: 60vw;
+    height: 250px;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: gray;
+    margin-top: 5vh;
+    margin-left:18vw;
+    margin-bottom: 5vh;
+}
+.attract
+{
+    width: 30%;
+    margin-left: 2.5%;
+    height: 60%;
+    float: left;
+    text-align: center;
+}
+#attractions h1
+{
+    margin-left: 2.5%;
+}
+.desc
+{
+    font-family: 'Oxygen';
+    width: 30%;
+    height: 80%;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: gray;
+    margin-top: 2%;
+    float: left;
+    margin-left: 2.5%;
+    text-align: center;
+    font-size: large;
+}
+.desc p
+{
+    color: #C4B976;
 }

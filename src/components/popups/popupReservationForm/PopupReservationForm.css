@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap');
+#head
+{
+    font-family: 'Oxygen';
+}
+#datebreakfast
+{
+    font-family: 'Oxygen';
+}
+#tofill
+{
+    font-family: 'Oxygen';
+}
+#topay
+{
+    font-family: 'Oxygen';
+}
+#book
+{
+    color:white;
+    background-color: #C4B976;
+    border: #C4B976;
+    border-radius: 5px;
+    padding-left:5%;
+    padding-right: 5%;
+    font-style: normal;
+    font-size: large;
+}
+#cancel
+{
+    color:white;
+    background-color: #C4C4C4;
+    border: #C4C4C4;
+    border-radius: 5px;
+    padding-left:5%;
+    padding-right: 5%;
+    font-style: normal;
+    margin-right: 5%;
+    font-size: large;
+
+}
+.filling
+{
+    border-radius: 5px;
+    border-color: gray;
+    border: #C4C4C4;
+}

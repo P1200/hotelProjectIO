@@ -1,10 +1,10 @@
 import './SpaTab.css';
 import { BsPlayFill } from "react-icons/bs";
-
+import { BsDot } from "react-icons/bs";
 const SpaTab = () => {
 
     return (
-        <div >
+        <div>
            <div id='spaImg'>
                 <p id="header">STREFA RELAKSU</p>
             </div>
@@ -34,9 +34,11 @@ const SpaTab = () => {
             <div id="SpaStart">
                 Strefa Relaksu
                 <div id="aboutSpa">
-                    Zachwalanie strefy relaksu
+                    Nasi specjaliści w masażu i zabiegach sprawią, że opuszczając nasz hotel poczujesz się 20 lat młodszy. Wypróbuj nasze najnowsze oferty:
+                    <p><BsDot/> zabieg oczyszczający</p>
+                    <p><BsDot/> zabieg regenerujący</p>
                 </div>
-            </div>
+            </div> 
             <div id="objectos">
                 <h1>Dostępne obiekty</h1>
                 <div className="objecto">

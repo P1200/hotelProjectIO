@@ -23,7 +23,12 @@ const RestaurantTab = () => {
             </div>
             <div id="RestaStart">
                 Restauracja
-                <div id="aboutRestaurant">o restauracji</div>
+                <div id="aboutRestaurant">
+                    <div className='restInfo'>Restauracja czynna w godzinach od 12:30 do 22:30</div>
+                    <div className="restInfo">Śniadania: 7:00-11:30</div>
+                    <div className="restInfo">Rezerwacje: +48 876 437 098</div>
+                </div>
+                
             </div>
 
             

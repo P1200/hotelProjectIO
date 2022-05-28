@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap');
 #spaImg
 {
     width: 100%;
@@ -22,6 +23,7 @@
 }
 #PriceList
 {
+    font-family: 'Oxygen';
     margin-top: 5vw;
     float:right;
     width:25vw;
@@ -44,12 +46,18 @@
     text-align: right;
     margin-right: 5%;
 }
+#prices p
+{
+    margin-top: 1%;
+    margin-bottom: 34%;
+}
 #PriceList h1
 {
     margin-left:5%
 }
 #SpaStart
 {
+    font-family: 'Oxygen';
     margin-top: 5vw;
     width:35vw;
     height:45vh;
@@ -62,13 +70,22 @@
     border-radius: 5px;
     border-color: gray;
     font-size:medium;
-    background-color: #C4C4C4;
+    background-color: white;
     height:74%;
+    text-align: center;
+    font-size: x-large;
+}
+#aboutSpa p
+{
+    color: #C4B976;
+    margin-bottom: 1%;
+    margin-top: 1%;
 }
 #objectos
 {
-    width: 60vw;
-    height: 400px;
+    font-family: 'Oxygen';
+    width: 61vw;
+    height: 410px;
     background-color: white;
     border: 1px solid;
     border-radius: 5px;
