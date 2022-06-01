@@ -2,7 +2,7 @@ import "./PopupReservationForm.css";
 import { useState } from 'react';
 import Modal from "../popupBasic/Modal";
 import * as yup from 'yup';
-
+import {doesClientExistInDB} from "./../../../apiOperations/apiGet";
 function PopupReservationForm({
     open,
     close,
@@ -27,8 +27,12 @@ function PopupReservationForm({
         e.preventDefault();
         const data = { name, mail, surname, IDN};
         try {
-          await schema.validate(data, {abortEarly: false});
-          alert(JSON.stringify(data));
+          let tmpIDN= await doesClientExistInDB(IDN);
+          if(tmpIDN===0)
+          console.log("nie istnieje ")
+          
+          else
+          console.log("istnieje")
         }
         catch (e) {
           const errors = e.inner.map(el => ({

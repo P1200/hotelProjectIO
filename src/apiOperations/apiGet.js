@@ -11,14 +11,22 @@ export async function getGallery()
 	})
 	return tmpResponse;
 }
-
+export async function getRooms() 
+{
+	let tmpResponse;
+	await axios.get('http://localhost:8080/room')
+	.then(function (response) {
+		tmpResponse=response.data;
+		return(tmpResponse);
+	})
+	return tmpResponse;
+}
 export async function doesClientExistInDB(perdonalId) 
 {
 	let tmpPerdonalId;
 	await axios.get(`http://localhost:8080/client/${perdonalId}`)
 	.then(function (response) {
 		tmpPerdonalId=response.data;
-        console.log(tmpPerdonalId)
 		return(tmpPerdonalId);
 	})
 	return tmpPerdonalId;
