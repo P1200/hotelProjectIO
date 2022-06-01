@@ -6,8 +6,7 @@ import PopupReservationForm from "../../popups/popupReservationForm/PopupReserva
 import './SalaryTab.css';
 import moment from 'moment';
 import {getAvaliabeRooms} from "./../../../apiOperations/apiGet";
-import { isCursorAtEnd } from '@testing-library/user-event/dist/utils';
-
+import axios from "axios";
 const SalaryTab = () => {
     const [date, setDate] = useState(new Date());
     const [isPopupReservationForm, setIsPopupReservationForm]=useState(false);
@@ -15,6 +14,7 @@ const SalaryTab = () => {
     const [bookedVisitArray, setBookedVisitArray]=useState([]);
     const [daysBetween,setDaysBetween] = useState(new Date().getDate());
     const currentDate = new Date();
+    const tmp=false
 
     let dateStart,dateEnd;
     return (
@@ -27,7 +27,10 @@ const SalaryTab = () => {
                     <div className='reserv_thng'>
                         <button 
                             onClick={async ()=>{
-                                let date1=moment(date[0]).format('YYYY-MM-DD');
+                                if(currentDate>=moment(date[0])._i)
+                                console.log("bad date")
+                                else
+                                {let date1=moment(date[0]).format('YYYY-MM-DD');
                                 let date2=moment(date[1]).format('YYYY-MM-DD');
                                 setDaysBetween(new Date(moment(date[1])).getDate()-new Date(moment(date[0])).getDate());
                                 let tmp= await getAvaliabeRooms(date1,date2);
@@ -49,7 +52,7 @@ const SalaryTab = () => {
                                    array2.push(tmpRoomsToBook)
                                 })
                                 setAvaliabeRooms(array);
-                                setBookedVisitArray(array2)                           
+                                setBookedVisitArray(array2) }                          
                         }} 
                         className='button2'>
                             Wybierz
@@ -60,7 +63,6 @@ const SalaryTab = () => {
                                 {dateStart=moment(date[0]).format('DD.MM.YYYY ')}
                                 do 
                                 {dateEnd=moment(date[1]).format(' DD.MM.YYYY')}
-                                
                             </p>
                         ) : <p id="WhichDate"> Wybierz termin</p>
                         }

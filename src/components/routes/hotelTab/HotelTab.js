@@ -2,13 +2,21 @@ import './HotelTab.css';
 import HotelHistoryPopup from "../../popups/hotelHistoryPopup/HotelHistoryPopup";
 import React, {useState } from 'react';
 import { AiOutlineRight } from "react-icons/ai";
-import {getGallery} from "./../../../apiOperations/apiGet";
+import {getGallery, getRooms} from "./../../../apiOperations/apiGet";
 
 const HotelTab = () => {
     const [isHotelHistoryPopup,setIsHotelHistoryPopup]=useState(false);
-    const images=getGallery();
+    const [images,setImages]=useState([]);//for mati
+    const [rooms,setRooms]=useState([])
+    let x="./kolik.png"
     return (
-        <div id='hotelTab'>
+
+
+        
+        <div id='hotelTab' onLoad={async()=>{
+            setImages(await getGallery())
+            setRooms(await  getRooms())
+        }}>
             <div id='hotelImg'>
                 <p id="header">HOTEL</p>
             </div>
@@ -27,10 +35,10 @@ const HotelTab = () => {
                     <h2>Galeria</h2> 
                     <br/>
                     <div id='gal1'>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxNkYs6O8BvDgTJEEtcm8LtKvRZpU49kiMzA&usqp=CAU" alt="obrazek" className='obr'/>
+                        <img src={require(`${x}`)} alt="obrazek" className='obr'/>
                     </div>
                     <div id='gal2'>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxNkYs6O8BvDgTJEEtcm8LtKvRZpU49kiMzA&usqp=CAU" alt="obrazek" className='obr'/>
+                        <img src={require("./kolik.png")} alt="obrazek" className='obr'/>
                     </div>
                     <p>Zobacz więcej <AiOutlineRight/></p>
                 </div>
@@ -38,25 +46,9 @@ const HotelTab = () => {
                 <div id="rooms">
                     <h2>Pokoje</h2>
                         <br/>
-                        <div className='room'>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxNkYs6O8BvDgTJEEtcm8LtKvRZpU49kiMzA&usqp=CAU" alt="pok 1" className='obr'/>
-                            <p>jakis pokoj <AiOutlineRight/></p>
-                        </div>
-                        <div className='room'>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxNkYs6O8BvDgTJEEtcm8LtKvRZpU49kiMzA&usqp=CAU" alt="pok 2" className='obr'/>
-                            <p>jakis pokoj <AiOutlineRight/></p>
-                        </div>
-                        <div className='room'>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxNkYs6O8BvDgTJEEtcm8LtKvRZpU49kiMzA&usqp=CAU" alt="pok 3" className='obr'/>
-                            <p>jakis pokoj <AiOutlineRight/></p>
-                        </div>
-                        <div className='room'>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxNkYs6O8BvDgTJEEtcm8LtKvRZpU49kiMzA&usqp=CAU" alt="pok 4" className='obr'/>
-                            <p>jakis pokoj <AiOutlineRight/></p>
-                        </div>
+                        {console.log(rooms)}   
                 </div>
             </div>
-            <button onClick={async()=> {console.log(await getGallery())}}>sdfsf</button> {/* healper */}
             <HotelHistoryPopup
                 open={isHotelHistoryPopup}
                 close={()=> setIsHotelHistoryPopup(false)}
