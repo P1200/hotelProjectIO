@@ -3,12 +3,14 @@ import HotelHistoryPopup from "../../popups/hotelHistoryPopup/HotelHistoryPopup"
 import React, {useState } from 'react';
 import { AiOutlineRight } from "react-icons/ai";
 import {getGallery, getRooms} from "./../../../apiOperations/apiGet";
-
+import PopupRoomInformation from "./../../popups/popupRoomInformation/PopupRoomInformation"
 const HotelTab = () => {
     const [isHotelHistoryPopup,setIsHotelHistoryPopup]=useState(false);
     const [images,setImages]=useState([]);//for mati
-    const [rooms,setRooms]=useState([])
-    let x="./kolik.png"
+    const [rooms,setRooms]=useState([]);
+    const [isPopupRoomInformation, setIsPopupRoomInformation]=useState(false);
+    const [roomInformation, setRoomInformation]=useState({});
+    let x="./imag/kolik.png"
     return (
 
 
@@ -38,7 +40,7 @@ const HotelTab = () => {
                         <img src={require(`${x}`)} alt="obrazek" className='obr'/>
                     </div>
                     <div id='gal2'>
-                        <img src={require("./kolik.png")} alt="obrazek" className='obr'/>
+                        <img src={require(`${x}`)} alt="obrazek" className='obr'/>
                     </div>
                     <p>Zobacz więcej <AiOutlineRight/></p>
                 </div>
@@ -46,6 +48,17 @@ const HotelTab = () => {
                 <div id="rooms">
                     <h2>Pokoje</h2>
                         <br/>
+                        {rooms.map((room)=>{
+                            return(
+                                <div onClick={()=>{
+                                    setIsPopupRoomInformation(true);
+                                    setRoomInformation(room)
+                                }}>
+                                {room.path}
+                                {room.kind} <AiOutlineRight/>
+                                </div>
+                            )
+                        })}
                         {console.log(rooms)}   
                 </div>
             </div>
@@ -53,6 +66,11 @@ const HotelTab = () => {
                 open={isHotelHistoryPopup}
                 close={()=> setIsHotelHistoryPopup(false)}
             />
+           <PopupRoomInformation
+           open={isPopupRoomInformation}
+           close={()=> setIsPopupRoomInformation(false)}
+           room={roomInformation}
+           />
         </div>
     )
 }
