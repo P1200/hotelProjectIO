@@ -6,7 +6,7 @@ import PopupReservationForm from "../../popups/popupReservationForm/PopupReserva
 import './SalaryTab.css';
 import moment from 'moment';
 import {getAvaliabeRooms} from "./../../../apiOperations/apiGet";
-import axios from "axios";
+
 const SalaryTab = () => {
     const [date, setDate] = useState(new Date());
     const [isPopupReservationForm, setIsPopupReservationForm]=useState(false);
