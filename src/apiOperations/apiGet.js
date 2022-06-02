@@ -26,7 +26,7 @@ export async function doesClientExistInDB(perdonalId)
 	let tmpPerdonalId;
 	await axios.get(`http://localhost:8080/client/${perdonalId}`)
 	.then(function (response) {
-		tmpPerdonalId=response.data;
+		tmpPerdonalId=response.data.ifClientExists;
 		return(tmpPerdonalId);
 	})
 	return tmpPerdonalId;

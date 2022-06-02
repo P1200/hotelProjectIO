@@ -3,6 +3,8 @@ import { useState } from 'react';
 import Modal from "../popupBasic/Modal";
 import * as yup from 'yup';
 import {doesClientExistInDB} from "./../../../apiOperations/apiGet";
+import {postClient, postVisit} from "./../../../apiOperations/apiPost";
+
 function PopupReservationForm({
     open,
     close,
@@ -27,12 +29,44 @@ function PopupReservationForm({
         e.preventDefault();
         const data = { name, mail, surname, IDN};
         try {
+          await schema.validate(data, {abortEarly: false});
+         
           let tmpIDN= await doesClientExistInDB(IDN);
-          if(tmpIDN===0)
-          console.log("nie istnieje ")
-          
-          else
-          console.log("istnieje")
+          console.log("tmpIDN")
+
+         if(tmpIDN==0)
+         {
+           let client={
+            idn: IDN,
+            name: name,
+            surname: surname,
+            email: mail,
+            phone_number: "x"
+           }
+           console.log(client)
+           await postClient(client)
+          console.log("newClientAdded")
+        }
+        
+        bookedVisitArray.map( async (visit)=>
+        {
+          let tmpVisit={};
+          if(parseInt(visit.value)!=0)
+          {
+            tmpVisit={
+            arrival_date:dateStart,
+            departure_date:dateEnd,
+            kind:visit.kind,
+            room_count:visit.room_count,
+            paid: true,
+            pesel:IDN
+          }
+          console.log("visitToBook")
+          console.log(tmpVisit)
+          await postVisit(tmpVisit);
+          }
+          })
+         
         }
         catch (e) {
           const errors = e.inner.map(el => ({
