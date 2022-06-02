@@ -7,8 +7,6 @@ import org.springframework.stereotype.Repository;
 import pl.mwlzg.funandrelaxhotel.sqltables.FreeReservation;
 import pl.mwlzg.funandrelaxhotel.sqltables.FreeRoomId;
 
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.sql.Date;
 import java.util.List;
 
@@ -19,7 +17,7 @@ public class FreeReservationRepository {
 
     public List<FreeReservation> getFreeReservations (Date from, Date to) {
 
-        List<FreeReservation> freeReservationList = jdbcTemplate.query(
+        return jdbcTemplate.query(
                 """
                         SELECT COUNT(*) AS room_count,prise,kind,description,path FROM(
                         SELECT DISTINCT reservation.room_id,prise,room.kind,description,path
@@ -35,14 +33,6 @@ public class FreeReservationRepository {
                 BeanPropertyRowMapper.newInstance(FreeReservation.class),
                 from,to,from,to
         );
-        for (FreeReservation freeReservation:freeReservationList){
-            Path currentRelativePath = Paths.get("");
-            System.out.println("------------");
-            System.out.println("Path to the class: "+currentRelativePath.toAbsolutePath());
-            freeReservation.setPath(currentRelativePath.toAbsolutePath()+"\\..\\Pictures\\"+freeReservation.getPath());
-            System.out.println(freeReservation.getPath());
-        }
-        return freeReservationList;
     }
 
     public List<FreeRoomId> getFreeReservationIds (Date from, Date to, String kind) {
