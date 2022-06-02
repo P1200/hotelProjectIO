@@ -21,14 +21,15 @@ public class GalleryRepository {
             Path currentRelativePath = Paths.get("");
             System.out.println("------------");
             System.out.println("Path to the class: "+currentRelativePath.toAbsolutePath());
-            auxiliary=Files.walk(Paths.get(currentRelativePath.toAbsolutePath()+"\\..\\Pictures"))
+            auxiliary=Files.walk(Paths.get(currentRelativePath.toAbsolutePath()+
+                            "\\..\\..\\src\\components\\routes\\hotelTab\\imag"))
                     .filter(Files::isRegularFile)
                     .toList();
         } catch (IOException e) {
             e.printStackTrace();
         }
         for (Path path:auxiliary){
-            listPaths.add(path.toString());
+            listPaths.add(path.getFileName().toString());
         }
         return new GalleryImages(listPaths);
     }
