@@ -1,0 +1,9 @@
+#cross
+{
+    float:right;
+    margin-left:95%;
+}
+#cross:hover
+{
+    color:red;
+}

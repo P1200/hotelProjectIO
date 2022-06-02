@@ -6,10 +6,20 @@ import PopupReservationForm from "../../popups/popupReservationForm/PopupReserva
 import './SalaryTab.css';
 import moment from 'moment';
 import {getAvaliabeRooms} from "./../../../apiOperations/apiGet";
-
+import PopupWrongNumberOfRooms from "./../../popups/popupWrongNumberOfRooms/PopupWrongNumberOfRooms"
+function checkAvaliableRooms(bookedVisitArray, avaliabeRooms)
+{
+    let isOK=true;
+    bookedVisitArray.map(room=>{
+        if( room.value<0) isOK=false   
+        else if( room.value>avaliabeRooms[room.id].roomCount) isOK=false  
+    })
+    return isOK
+}
 const SalaryTab = () => {
     const [date, setDate] = useState(new Date());
     const [isPopupReservationForm, setIsPopupReservationForm]=useState(false);
+    const [isPopupWrongNumberOfRooms, setIsPopupWrongNumberOfRooms]=useState(false);
     const [avaliabeRooms, setAvaliabeRooms]=useState([]);
     const [bookedVisitArray, setBookedVisitArray]=useState([]);
     const [daysBetween,setDaysBetween] = useState(new Date().getDate());
@@ -48,7 +58,7 @@ const SalaryTab = () => {
                                    i++;
                                    array.push(tmpRoom);
 
-                                   let tmpRoomsToBook={id: i, kind: room.kind, value:0, prise: room.prise};
+                                   let tmpRoomsToBook={id: i-1, kind: room.kind, value:0, prise: room.prise};
                                    array2.push(tmpRoomsToBook)
                                 })
                                 setAvaliabeRooms(array);
@@ -103,8 +113,18 @@ const SalaryTab = () => {
                  })}
                 
             </div>
-            {avaliabeRooms.length!=0 ? <button onClick={()=>setIsPopupReservationForm(true)} className='button2' id='reserv_button'>Rezerwuj</button>:""}
-    
+            {avaliabeRooms.length!=0? 
+            <button onClick={()=>{
+                if(checkAvaliableRooms(bookedVisitArray,avaliabeRooms)==false) setIsPopupWrongNumberOfRooms(true)
+                else setIsPopupReservationForm(true)}} 
+                className='button2' id='reserv_button'
+            >
+                    Rezerwuj
+            </button>:""}
+            <PopupWrongNumberOfRooms
+                open={isPopupWrongNumberOfRooms}
+                close={()=>setIsPopupWrongNumberOfRooms(false)}
+            />
             <PopupReservationForm
                 open={isPopupReservationForm}
                 close={()=>setIsPopupReservationForm(false)}

@@ -32,7 +32,6 @@ function PopupReservationForm({
           await schema.validate(data, {abortEarly: false});
          
           let tmpIDN= await doesClientExistInDB(IDN);
-          console.log("tmpIDN")
 
          if(tmpIDN==0)
          {
@@ -45,7 +44,7 @@ function PopupReservationForm({
            }
            console.log(client)
            await postClient(client)
-          console.log("newClientAdded")
+          console.log("newClientAdded-")
         }
         
         bookedVisitArray.map( async (visit)=>
