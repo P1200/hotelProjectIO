@@ -38,11 +38,11 @@ const RestaurantTab = () => {
             <div id="offers">
                 <h1>Oferta</h1>
                 <div className='offer' onClick={()=>setIsBreakfastOffer(true)}> 
-                    <img src={require('./images/restaurantMenuImg.png')} width="200" height="100" />
+                    <img src={require('./images/restaurantMenuImg.png')} width="100%" height="100%" />
                     Śniadania <AiOutlineRight/>
                 </div>
                 <div className='offer' onClick={()=>setIsRestaurantMenu(true)}>
-                <img src={require('./images/breakfastOfferImg.png')} width="200" height="100" />
+                <img src={require('./images/breakfastOfferImg.png')} width="100%" height="100%" />
                     Menu Restauracyjne <AiOutlineRight/>
                 </div>
             </div>

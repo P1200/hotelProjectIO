@@ -12,11 +12,11 @@ function HotelHistoryPopup({
       open={open}
      >
        <AiOutlineClose onClick={close} id="cross"/>
-       <div>
+       <div id="HotelHistory">
         Hotel Fun&Relax założony w roku 2022 przez 4 studentów informatyki pierwszego stopnia z tytułem inżyniera z Zielonej Góry,
         którzy nie mieli pomysłu na projekt na zaliczenie przedmiotu, jakim jest Inżynieria 
         Oprogramowania prowadzona przez Pana doktora inżyniera Tomasza Gratkowskiego. Hotel kieruje
-        się znanym przez wszystkich studentów mottem „byle na 3”, co można zobaczyć w zarządzaniu naszą placówką. Jeśli to przeczytałeś w recepcji możesz podac tajne hesło "ANSI C", dzięki, któremu kupon rabatowy na ciasta w naszej restauracji.
+        się znanym przez wszystkich studentów mottem „byle na 3”, co można zobaczyć w zarządzaniu naszą placówką. Jeśli to przeczytałeś w recepcji możesz podac tajne hasło "ANSI C", dzięki, któremu kupon rabatowy na ciasta w naszej restauracji.
        </div>
     </Modal>
   );
