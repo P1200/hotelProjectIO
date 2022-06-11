@@ -6,7 +6,7 @@ export async function getGallery()
 	let tmpResponse;
 	await axios.get('http://localhost:8080/gallery')
 	.then(function (response) {
-		tmpResponse=response.data.paths;
+		tmpResponse=response.data;
 		return(tmpResponse);
 	})
 	return tmpResponse;

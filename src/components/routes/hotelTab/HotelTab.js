@@ -10,6 +10,7 @@ const HotelTab = () => {
     const [isHotelHistoryPopup,setIsHotelHistoryPopup]=useState(false);
     const [rooms,setRooms]=useState([]);
     const [isPopupRoomInformation, setIsPopupRoomInformation]=useState(false);
+    const [isPopupGallery, setIsPopupGallery]=useState(false);
     const [roomInformation, setRoomInformation]=useState({});
     return (
 
@@ -32,11 +33,11 @@ const HotelTab = () => {
                     się znanym przez wszystkich studentów mottem „byle na 3”, co można zobaczyć w zarządzaniu naszą placówką.
                     </p>
                 </div>
-                <div id="gallery">
+                <div id="gallery" onClick={()=>setIsPopupGallery(true)}>
                     <h2>Galeria</h2> 
                     <br/>
                     <div id='gal1'>
-                        <img src={require("./imag/1os.png")} alt="obrazek" className='obr'/>\
+                        <img src={require("./imag/1os.png")} alt="obrazek" className='obr'/>
                         
                     </div>
                     <div id='gal2'>
@@ -70,6 +71,12 @@ const HotelTab = () => {
            close={()=> setIsPopupRoomInformation(false)}
            room={roomInformation}
            />
+            <PopupGallery
+                open={isPopupGallery}
+                close={()=> setIsPopupGallery(false)}
+            />
+        
+
         </div>
     )
 }

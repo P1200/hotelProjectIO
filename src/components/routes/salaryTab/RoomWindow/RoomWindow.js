@@ -12,7 +12,7 @@ const RoomWindow = ({
     return (
         <div id="roomWindow">
             <div> {roomName}</div>
-            <div id="picture">{image}</div>
+            <div id="picture"><img src={require(`./imag/${image}`)} alt="obrazek" className='obr'/></div>
             <div id="parameters">
                 <p><IoIosBed/> Łóżko jednoosobowe</p>
                 <p><BsAsterisk/>  Klimatyzacja</p>

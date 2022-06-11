@@ -1,20 +1,26 @@
 import Modal from "../popupBasic/Modal";
 import './PopupGallery.css';
 import { AiOutlineClose } from "react-icons/ai";
-import {getGallery} from "./../../../apiOperations/apiGet";
-import React, {useState } from 'react';
+import { getGallery } from "./../../../apiOperations/apiGet";
+import React, { useState } from 'react';
 function PopupGallery({
   open,
   close
 }) {
-    return (
-      <Modal
+  const [images,setImages]=useState([])
+  return (
+    <Modal
       open={open}
-     >
-       <AiOutlineClose onClick={close} id="cross"/>
-       <div id="HotelHistory">
-        gagl
-       </div>
+    >
+      <div
+        onLoad={async () => {
+          setImages(await getGallery())
+        }}>
+        <AiOutlineClose onClick={close} id="cross" />
+        <div id="HotelHistory">
+          <div onClick={async ()=>console.logg(await getGallery()) }>gagl</div>
+        </div>
+      </div>
     </Modal>
   );
 }
