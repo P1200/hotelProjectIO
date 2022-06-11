@@ -2,21 +2,20 @@ import './HotelTab.css';
 import HotelHistoryPopup from "../../popups/hotelHistoryPopup/HotelHistoryPopup";
 import React, {useState } from 'react';
 import { AiOutlineRight } from "react-icons/ai";
-import {getGallery, getRooms} from "./../../../apiOperations/apiGet";
-import PopupRoomInformation from "./../../popups/popupRoomInformation/PopupRoomInformation"
+import { getRooms} from "./../../../apiOperations/apiGet";
+import PopupRoomInformation from "./../../popups/popupRoomInformation/PopupRoomInformation";
+import PopupGallery from "./../../popups/popupGallery/PopupGallery";
+
 const HotelTab = () => {
     const [isHotelHistoryPopup,setIsHotelHistoryPopup]=useState(false);
-    const [images,setImages]=useState([]);//for mati
     const [rooms,setRooms]=useState([]);
     const [isPopupRoomInformation, setIsPopupRoomInformation]=useState(false);
     const [roomInformation, setRoomInformation]=useState({});
-    let x="./imag/kolik.png"
     return (
 
 
         
         <div id='hotelTab' onLoad={async()=>{
-            setImages(await getGallery())
             setRooms(await  getRooms())
         }}>
             <div id='hotelImg'>
@@ -37,10 +36,11 @@ const HotelTab = () => {
                     <h2>Galeria</h2> 
                     <br/>
                     <div id='gal1'>
-                        <img src={require(`${x}`)} alt="obrazek" className='obr'/>
+                        <img src={require("./imag/1os.png")} alt="obrazek" className='obr'/>\
+                        
                     </div>
                     <div id='gal2'>
-                        <img src={require(`${x}`)} alt="obrazek" className='obr'/>
+                        <img src={require("./imag/2os.png")} alt="obrazek" className='obr'/>
                     </div>
                     <p>Zobacz więcej <AiOutlineRight/></p>
                 </div>
@@ -54,12 +54,11 @@ const HotelTab = () => {
                                     setIsPopupRoomInformation(true);
                                     setRoomInformation(room)
                                 }}>
-                                {room.path}
+                                <img src={require(`./imag/${room.path}`)} alt="obrazek" className='obr'/>
                                 {room.kind} <AiOutlineRight/>
                                 </div>
                             )
-                        })}
-                        {console.log(rooms)}   
+                        })}  
                 </div>
             </div>
             <HotelHistoryPopup

@@ -1,0 +1,13 @@
+#cross
+{
+    float:right;
+    margin-left:95%;
+}
+#cross:hover
+{
+    color:red;
+}
+#HotelHistory
+{
+    font-size: 30px;
+}
