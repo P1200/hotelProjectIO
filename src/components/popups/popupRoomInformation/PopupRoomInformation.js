@@ -12,11 +12,13 @@ function PopupRoomInformation({
       open={open}
      >
        <AiOutlineClose onClick={close} id="cross"/>
-       {room.path}
        <div>
         {room.kind}
         <div>
           {room.description}
+        </div>
+        <div>
+        Pokój ze standardowym wyposażeniem tj. łóżko, biurko, szafa, TV oraz prywatna łazienka.
         </div>
        </div>
     </Modal>

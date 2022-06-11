@@ -1,6 +1,6 @@
 .contactInformation
 {
-    width: 15%;
+    width: 10%;
     min-width: fit-content;
     float: left;
     display: block;
@@ -11,6 +11,7 @@
     border: 1px solid #C4B976;
     background-color: white;
     border-radius:10px;
+    padding: 1%;
 }
 #cls
 {

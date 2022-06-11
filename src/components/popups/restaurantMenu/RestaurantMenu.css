@@ -1,0 +1,28 @@
+.page
+{
+    float: left;
+}
+#drinks
+{
+    clear: both;
+}
+.page h2
+{
+    margin-right: 12vw;
+}
+.pagealko h2
+{
+    margin-right: 11vw;
+    margin-top: 0%;
+    color: #C4B976;
+
+}
+#drinktypes
+{
+    margin-top: 43vh;
+    margin-bottom: 0%;
+}
+.pagealko
+{
+    float: left;
+}

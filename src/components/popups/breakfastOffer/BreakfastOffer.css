@@ -1,0 +1,36 @@
+#cross
+{
+    float: right;
+}
+.positionpop
+{
+    margin-left: 0%;
+}
+.DescDishpop
+{
+    font-size: small;
+    margin-top:0.5%;
+    
+}
+.DishwDescpop
+{
+    margin-bottom: 0%;
+    margin-left: 0%;
+}
+.pricepop
+{
+    float:right;
+    margin-right: 5%;
+}
+#ctpromo
+{
+    margin-top: 2%;
+    color: #C4B976;
+    font-size: large;
+}
+#flex
+{
+    font-size: large;
+    margin-top: 4%;
+    text-align: center;
+}
